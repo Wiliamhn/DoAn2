@@ -1,0 +1,661 @@
+<html lang="en">
+<head>
+	<title>Light Novel</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="Trangchu.css" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	.swiper-slide{
+		text-align: center;
+		font-size: 18px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		display:grid;
+	    grid-template-columns:168px 168px 168px 168px 168px 168px;
+	    gap:34px;
+	    height: 310px;
+		width: 1200px;
+	  } 
+	  .content-img{
+		width:100%;
+	    height:250px;
+	}
+	.div1{
+		width:170px;
+		height:250px;
+	}
+	.div2{
+		height:32px;
+		width:170px;
+		text-align:center;
+	}
+	.content-box:hover{
+		border:0.5px solid black;
+		padding:1px;
+		transition:0.2s;
+	}
+	.content-box{
+		height:285px;
+		width: 170px;  
+	}
+	 </style>
+</head>
+<body>
+	<header>
+		<div class="ngoc container">
+			<img src="logo.jpg" href="#" alt="logo" class="logo" />
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			<a href="#" id="dangnhap">Đăng nhập</a>
+			
+			   <div class="drop">
+			     	<button onclick="myFunction()" class="dropbutton" src="avt.jpg"><img src="avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+				
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="#">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="#">Truyện theo dõi <i class='bx bxs-book-bookmark' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header>
+	<section>
+		<br /><br /><br /><br /><br />
+		<div class="img-logo2">
+			<img src="logo2.png" alt="Logo2" width="100%" height="200" id="logo2" />
+		</div><br /><br />
+			<div class="navbar">
+			  <a href="#home" style="margin-left: 500px;">Home</a>
+			  <a href="gioithieu.html">Giới thiệu</a>
+			  <div class="dropdown">
+				<button class="dropbtn" style = "font-size: 19px;">Thể loại
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <div class="header">
+					<span>Tất cả</span>
+				  </div>
+				  <div class="row">
+					<div class="column">
+					  <a href="#">Action</a>
+					  <a href="#">Adult</a>
+					  <a href="#">Adventure</a>
+					  <a href="#">Comedy</a>
+					  <a href="#">Comic</a>
+					</div>
+					<div class="column">
+					  <a href="#">Fantasy</a>
+					  <a href="#">Horror</a>
+					  <a href="#">Historycal</a>
+					  <a href="#">Drama</a>
+					  <a href="#">Ecchi</a>
+					</div>
+					<div class="column">
+					  <a href="#">Slice of life</a>
+					  <a href="#">Shounen</a>
+					  <a href="#">Josei</a>
+					  <a href="#">Soft yuri</a>
+					  <a href="#">School life</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <a href="home">Bàn luận</a>
+			  <a href="home">Tải app<i class="fa fa-download" style="font-size: 15px;padding-left: 2px;"></i></a>
+			  <a href="home">Convert</a>
+			</div>
+		<h2 class="tieude1">Truyện Nổi Bật <i class='bx bx-chevron-right'></i></h2>
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide">
+				<div class="content-box">
+					<div class="div1">
+					  <img src="tr1.jpg" alt="" class="content-img" />
+					</div>
+					<div class="div2">
+						<a href="tr1.html" class="div2-title">One punch man</a>
+					</div>
+				</div>
+				<div class="content-box">
+				  <div class="div1">
+					<img src="tr2.jpg" alt="" class="content-img" />
+				  </div>
+				  <div class="div2">
+					  <a href="#" class="div2-title">Kimetsu No Yaiba</a>
+				  </div>
+			  </div>
+			  <div class="content-box">
+				<div class="div1">
+				  <img src="tr3.webp" alt="" class="content-img" />
+				</div>
+				<div class="div2">
+					<a href="#" class="div2-title">Suzume no Tojimori</a>
+				</div>
+			</div>
+			<div class="content-box">
+			  <div class="div1">
+				<img src="tr4.jpe" alt="" class="content-img" />
+			  </div>
+			  <div class="div2">
+				  <a href="#" class="div2-title">OVER LORD</a>
+			  </div>
+		  </div>
+		  <div class="content-box">
+			<div class="div1">
+			  <img src="tr5.jpg" alt="" class="content-img" />
+			</div>
+			<div class="div2">
+				<a href="#" class="div2-title">Tensei shitara slime datta ken</a>
+			</div>
+		</div>
+		<div class="content-box">
+		  <div class="div1">
+			<img src="tr6.webp" alt="" class="content-img" />
+		  </div>
+		  <div class="div2">
+			  <a href="#" class="div2-title">Maou gakuin</a>
+		  </div>
+		</div>
+			  </div>
+			  <div class="swiper-slide">
+				<div class="content-box">
+					<div class="div1">
+					  <img src="tr37.jpg" alt="" class="content-img" />
+					</div>
+					<div class="div2">
+						<a href="#" class="div2-title">ISEKAI TORIWAKE</a>
+					</div>
+				</div>
+				<div class="content-box">
+				  <div class="div1">
+					<img src="tr38.jpg" alt="" class="content-img" />
+				  </div>
+				  <div class="div2">
+					  <a href="#" class="div2-title">Jujutsu Kaisen</a>
+				  </div>
+			  </div>
+			  <div class="content-box">
+				<div class="div1">
+				  <img src="tr44.jpg" alt="" class="content-img" style="width:170px" />
+				</div>
+				<div class="div2">
+					<a href="#" class="div2-title">Solo Leveling</a>
+				</div>
+			</div>
+			<div class="content-box">
+			  <div class="div1">
+				<img src="tr42.jpg" alt="" class="content-img" />
+			  </div>
+			  <div class="div2">
+				  <a href="#" class="div2-title">Mushoku Tensei</a>
+			  </div>
+		  </div>
+		  <div class="content-box">
+			<div class="div1">
+			  <img src="tr41.jpg" alt="" class="content-img" />
+			</div>
+			<div class="div2">
+				<a href="#" class="div2-title">86</a>
+			</div>
+		</div>
+		<div class="content-box">
+		  <div class="div1">
+			<img src="tr43.jpg" alt="" class="content-img" />
+		  </div>
+		  <div class="div2">
+			  <a href="#" class="div2-title">dead note</a>
+		  </div>
+		</div>
+			  </div>
+			</div>
+			<div class="swiper-button-next" style="color:aquamarine;"></div>
+			<div class="swiper-button-prev"  style="color:aquamarine;"></div>
+		  </div>
+		<h2 class="tieude1">Truyện mới cập nhật<i class='bx bx-chevron-right'></i> </h2>
+		<div class="menu">
+			<div class="menu-left">
+				<div class="menu-content">
+					<div class="menu-box">
+						<img src="tr12.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Tôi chờ em bằng cả mùa xuân của ngày hôm qua</a>
+					</div>
+				</div>
+				<div class="menu-content1">
+					<div class="menu-box">
+						<img src="tr13.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Ankoku kishi monogatari~Yuusha</a>
+					</div>
+				</div>
+				<div class="menu-content1">
+					<div class="menu-box">
+						<img src="tr14.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Re:Zero kara Hajimeru Isekai Seikatsu</a>
+					</div>
+				</div>
+				<div class="menu-content1">
+					<div class="menu-box">
+						<img src="tr16.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Kimi to Boku no Saigo no Senjo, Arui wa Sekai ga</a>
+					</div>
+				</div>
+				<div class="menu-content1">
+					<div class="menu-box">
+						<img src="tr15.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Aria-san bàn bên thi thoảng lại thả thính tôi</a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="tr17.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Cô Em Gái Thằng Bạn Thân </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr18.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">How to Keep a Distance from a Beautiful Girl</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr19.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title" style="line-height:50px;">Liar Liar</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr20.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title"style="line-height:50px;">Tearmoon Empire</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr21.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title"style="line-height:50px;">Tiếng Vọng Thiên Đường</a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="tr22.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Over Limit Skill Holder: Only the Reincarnated</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr23.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title"style="line-height:50px;">Magical Girl Tyrant Sylph</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr24.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Cho tới khi cô bạn từng nói "Hãy mãi là bạn nhé?"</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr25.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Chẳng biết vì sao Nữ thần học đường lại thích ...</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr26.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Tensei Oujo To Tensai Reijou No Mahou ...</a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="tr27.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">The Demon Prince goes to the Academy</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr28.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title"style="line-height:50px;">Imouto sae Ireba Ii</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr29.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">The Darkness Was Comfortable for Me</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr30.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Ori of the Dragon Chain - "Heart" in the mind</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr31.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Tiểu Thuyết Kamen Rider Decade</a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="tr32.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">GioGio's Bizarre Adventure II: Golden </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr33.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Dối trá, lừa lọc và trường học dị năng</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr34.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr35.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="tr36.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div">
+						<a href="#" class="menu-title">Boushoku no Berserk ~ Ore dake Level </a>
+					</div>
+				</div>
+			<div class="menu-bottom">
+			    <a href="" class="next-page1">1</a>
+				<a href="#" class="next-page">2</a>
+				<a href="#" class="next-page">3</a>
+				<a href="#" class="next-page">4</a>
+				<a href="#" class="next-page">5</a>
+				<a href="#" class="next-page">100</a>
+				<a href="#" class="next-page">200</a>
+				<a href="#" class="next-page">300</a>
+				<a href="#" class="next-page">400</a>
+				<a href="#" class="next-page">500</a>
+				<a href="#" class="next-page">></a>
+				<a href="#" class="next-page">>></a>
+			</div>
+			</div>
+			<div class="menu-right">
+				<div class="history">
+					<span class="tieude2">Lịch sử đọc truyện</span>
+					<a href="#" class="history-all"><i>xem tất cả</i><a>
+							<div class="history-content1">
+								<div class="history-content-left">
+									<img src="tr6.webp" alt="" class="history-img" />
+								</div>
+								<div class="history-content-right">
+									<a href="#" class="history-title">Maou gakuin</a><br />
+									<span class="history-title1">VOL 6</span><br /><br />
+									<a href="#" class="history-title2">Chương 02: Phá vỡ giới hạn</a>
+									<hr>
+									</hr>
+								</div>
+							</div>
+							<div class="history-content1">
+								<div class="history-content-left">
+									<img src="tr4.jpe" alt="" class="history-img" />
+								</div>
+								<div class="history-content-right">
+									<a href="#" class="history-title">OVER LORD</a><br />
+									<span class="history-title1">VOL 3</span><br /><br />
+									<a href="#" class="history-title2">Chương 04:Tùy tùng phản bội</a>
+									<hr>
+									</hr>
+								</div>
+							</div>
+				</div>
+				<div class="top">
+					<span class="tieude2">Top truyện</span>
+					<div class="tab">
+						<button class="tablinks" onclick="openCity(event, 'London')">Top Ngày</button>
+						<button class="tablinks" onclick="openCity(event, 'Paris')">Top Tuần</button>
+						<button class="tablinks" onclick="openCity(event, 'Tokyo')">Top Tháng</button>
+					  </div>
+					  <div id="London" class="tabcontent">
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:aqua; font-size:20;">01</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr4.jpe" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">OVER LORD</a><br />	
+							<span class="top-view">23M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(0, 255, 34); font-size:20;">02</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr8.jpg" alt="" class="top-img" />
+							</div>
+							<a href="#" class="top-title">OTOME Game no Heroine de... </a><br />	
+							<span class="top-view">21M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(217, 255, 0); font-size:20;">03</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr9.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">My Sister Best Friend</a><br />	
+							<span class="top-view">18M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(231, 108, 21); font-size:20;">04</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr10.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">Kamen Rider OOO</a><br />	
+							<span class="top-view">14tr</span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(17, 195, 189); font-size:20;">05</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr11.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">Thiên Sứ Nhà Bên</a><br />	
+							<span class="top-view">13,9tr </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(242, 51, 51); font-size:20;">06</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr7.jpg" alt="" class="top-img" />
+							</div>
+							<a href="#" class="top-title">Cô bạn gái không quan tâm đến tôi và ...</a><br />	
+							<span class="top-view">12,5tr </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+					  </div>
+					  <div id="Paris" class="tabcontent">
+						<div class="top-item">
+							<div class="top-item-number">
+							 <span style="color:aqua; font-size:20;">01</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr24.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title"> Cho tới khi cô bạn ... </a><br />	
+							<span class="top-view">33M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+							 <span style="color:rgb(0, 255, 34); font-size:20;">02</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr4.jpe" alt="" class="top-img" />
+							</div>
+							<a href="#" class="top-title">OVER LORD </a><br />	
+							<span class="top-view">23M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(217, 255, 0); font-size:20;">03</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr5.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">Tenshei Shitara Slime..</a><br />	
+							<span class="top-view">22M </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(231, 108, 21); font-size:20;">04</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr18.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">How to keep Dis...</a><br />	
+							<span class="top-view">20tr</span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+											 <span style="color:rgb(17, 195, 189); font-size:20;">05</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr13.jpg" alt="" class="top-img" />
+							</div><br />
+							<a href="#" class="top-title">Ankiku Kishi Mon...</a><br />	
+							<span class="top-view">17,9tr </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+						  <div class="top-item">
+							<div class="top-item-number">
+								<span style="color:rgb(242, 51, 51); font-size:20;">06</span>
+							</div>
+							<div class="top-item-img">
+							  <img src="tr36.jpg" alt="" class="top-img" />
+							</div>
+							<a href="#" class="top-title">Boushoku no Berserk Ore...</a><br />	
+							<span class="top-view">12,5tr </span>				
+							<i class='bx bx-happy-heart-eyes' id="top-icon"></i>
+						  </div>
+					  </div>
+					  
+					  <div id="Tokyo" class="tabcontent">
+						<h3>Error!</h3>
+					  </div>
+					</div>
+					<div class="comment">
+						<div class="comment-title">
+							<span class="tieude2">Bình luận mới</span>
+
+						</div>
+						<div class="comment-body">
+							<div class="comment-box">
+							     <div class="comment-box-title">
+									<span>Bản chất của chuyển sinh</span>
+									<a href="#"> Chapter 73</a>
+								 </div>
+								 <div class="comment-box-content">
+									<div class="comment-box-content-left">
+										<img src="avt1.jpg" alt="" class="comment-img" />
+									</div>
+									<div class="comment-box-content-right">
+										<span>Xin lui vi dep gai</span>
+										<i class='bx bx-time-five' id="comment-icon" ></i>
+										<g>1 giây trước</g>
+										<div class="comment-box-content-right-body">
+											<p>Lâu lắm chưa đọc truyện	 nào hay như này </p>
+										</div>
+									</div>
+								 </div>
+								 <hr>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="end">
+		<span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
+		<span class="end-title1">Liên hệ:</span>
+		<a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link">FB: Hải Ngọc</a>
+	</div>
+	<div id="backtop">
+		<i class='bx bx-chevron-up' id="backtop-icon"></i>
+	</div>
+	</section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script src="Trangchu.js"></script>
+</html>

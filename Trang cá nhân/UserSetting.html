@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Trang cá nhân </title>
+    <link rel="stylesheet" href="UserSetting.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+		<div class="ngoc headed">
+			<img src="logo.jpg" href="#" alt="logo" class="logo" />
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			   <div class="drop">
+			     	<button onclick="myFunction()" class="dropbutton" src="avt.jpg"><img src="avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="#">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="#">Truyện theo dõi <i class='bx bxs-book-bookmark' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header>
+    <section>
+
+
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)"
+                class="tab active">
+                <i class='bx bx-user-circle'></i>
+                </a>
+                <a onclick="tabs(1)"
+                class="tab">
+                <i class='bx bx-book'></i>
+                </a>
+                <a onclick="tabs(2)"
+                class="tab">
+                <i class='bx bx-tv' ></i>
+                </a>
+                <a onclick="tabs(3)"
+                class="tab">
+                <i class='bx bxs-detail' ></i>
+                </a>
+                <a onclick="tabs(4)"
+                class="tab">
+                <i class='bx bx-cog' ></i>
+                </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <div class="avatarchange">
+                    <span>Avatar</span>
+                    <img src="avt.jpg" alt="" class="avatarchange-img"  />
+                    <input type="file" class="file" name="file">
+                </div>
+                <h1>Thông tin tài khoản</h1>
+                <h2>Họ Tên</h2>
+                <input type="text"
+                 class="input" value="Hai Ngoc">
+                <h2>Ngày sinh</h2>
+                <input type="text"
+                 class="input" value="12/11/2003">
+                 <h2>Giới tính</h2>
+                <input type="text"
+                 class="input" value="Nam">
+                 <h2>Địa chỉ Email</h2>
+                <input type="email"
+                 class="input" value="Anhdeptrai123@gmail.com">
+                 <h2>Mật khẩu</h2>
+                <input type="password"
+                 class="input" value="cccccccc"><br>
+                 <button class="btn">Cập nhật</button>
+                
+            </div>
+            <div class="payment tabShow">
+                <h1>Truyện đã đăng</h1>
+                <div class="thongbao">
+                    <p>Bạn chưa có quyền upload truyện. Nếu bán muốn trở thành tác giả/Dịch giả , vui lòng đăng kí form bên dưới </p>
+                </div>
+                <input type="text"
+                 class="thongbao-input"><br>
+                 <button class="thongbao-button">Đăng kí thành Tác giả/Dịch giả</button>
+                
+            </div>
+            <div class="subcription tabShow">
+                <h1>Subcription Info</h1>
+                <h2>Payment Date</h2>
+                <p>MAy12,2023</p>
+                <h2>Next Chargers</h2>
+                <p>$80.56 <span>includes tax</span></p>
+                 <h2>Plan</h2>
+                <p>Limited plan</p>
+                 <h2>Monthly</h2>
+                <p>$107.89/month</p>
+                 <button class="btn">Cập nhật</button>
+            </div>
+            <div class="privacy tabShow">
+                <h1>Privacy Info</h1>
+                <h2>Payment Date</h2>
+                <p>MAy12,2023</p>
+                <h2>Next Chargers</h2>
+                <p>$80.56 <span>includes tax</span></p>
+                 <h2>Plan</h2>
+                <p>Limited plan</p>
+                 <h2>Monthly</h2>
+                <p>$107.89/month</p>
+                 <button class="btn">Cập nhật</button>
+            </div>
+            <div class="setting tabShow">
+                <h1>Đổi mật khẩu </h1>                       
+                <h2>Mật khẩu cũ </h2>
+                <input type="password"
+                 class="input" value="">
+                 <h2>Mật khẩu mới</h2>
+                 <input type="password"
+                 class="input" value="">
+                 <h2>Nhập lại mật khẩu mới</h2>
+                 <input type="password"
+                 class="input" value=""><br>
+                 <button class="btn">Cập nhật</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery/jquery.js"></script>
+    <script>
+        const tabBtn=document.querySelectorAll(".tab");
+        const tab=document.querySelectorAll(".tabShow");
+        function tabs(panelIndex){
+            tab.forEach(function(node){
+                node.style.display="none";
+            });
+            tab[panelIndex].style.display="block";
+        }
+        tabs(0);
+    </script>
+    <script>
+        $(".tab").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+
+    </script>
+    <script>
+        function myFunction() {
+  document.getElementById("myDrop").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbutton')) {
+    var dropdowns = document.getElementsByClassName("drop-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+    <script>
+        const image = document.querySelector(".avatarchange-img"),
+        input=document.querySelector(".file");
+
+        input=addEventListener("change",()=> {
+            image.src=URL.createObjectURL(input.files[0]);
+        });
+
+    </script>
+    </section>
+
+</body>
+
+</html>
