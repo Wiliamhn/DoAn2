@@ -8,13 +8,17 @@
 	margin:auto;
 	width:100%;
 }
+body{
+	background:  url('background1.jpg');
+}
 header{
 	position: fixed;
 	top: 0;
 	left:0;
 	width:100%;
 	background: white;
-	box-shadow:0 1px 4px hsl(0 4% 15% /10%);
+	box-shadow: 3px 3px 10px
+    rgba(2, 2, 2, 0.5);
 	z-index:100;
 }
 .logo{
@@ -127,18 +131,21 @@ header{
   /* Navbar container */
 .navbar {
 	overflow: hidden;
-	background-color: #e4e2e2;
+	background-color: rgb(148, 148, 148);
 	font-family: Arial;
+	background:url('wood.jpg') ;
   }
   
   /* Links inside the navbar */
   .navbar a {
 	float: left;
 	font-size: 19px;
-	color: rgb(0, 0, 0);
+	color: cyan;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	font-weight: 300;
+	
   }
   
   /* The dropdown container */
@@ -152,7 +159,7 @@ header{
 	font-size: 19px;
 	border: none;
 	outline: none;
-	color: rgb(0, 0, 0);
+	color: cyan;
 	padding: 14px 16px;
 	background-color: inherit;
 	font: inherit; /* Important for vertical align on mobile phones */
@@ -163,16 +170,19 @@ header{
   .navbar a:hover, .dropdown:hover .dropbtn {
 	background-color: rgb(199, 199, 199);
 	color:#f5f5f5;
+	background:url('woodhover.webp') ;
+	
   }
   .navbar a:hover{
 	color:#ffffff;
+	background:url('woodhover.webp') ;
   }
   
   /* Dropdown content (hidden by default) */
   .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgb(199, 199, 199);;
+	background-color: rgb(177, 176, 176);;
 	width: 900px;
 	margin-left: 300px;
 	left: 0;
@@ -187,9 +197,15 @@ header{
 	padding: 20px;
 	color:#10b18e ;
   }
-  .header span{
-	line-height: 30px;
-	font-size: 18px;
+  .headerr span{
+	line-height: 40px;
+	font-size: 25px;
+	color:rgb(0, 0, 0);
+	margin-left: 20px;
+  }
+  .headerr{
+	background:url('wood1.jpg') ;
+	height: 40px;
   }
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
@@ -221,7 +237,7 @@ header{
   /* Add a background color on hover */
   .column a:hover {
 	background-color: #ddd;
-	color:#00CC99
+	color:#ffffff
   }
   
   /* Clear floats after the columns */
@@ -252,15 +268,15 @@ header{
 }
 .menu{
 	width:1190px;
-	height:1600px;
+	height:2600px;
 	margin:0px auto;
 }
 .menu-left{
 	float:left;
 	width:880px;
-	height:1600px;
+	height:2500;
 	gap:20px;
-	background-color: #87CEFA;
+
 }
 .menu-content{
 	position: relative;
@@ -269,6 +285,9 @@ header{
 	width:165px;
 	float:left;
 }
+.menu-content:hover{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 .menu-content1{
 	position: relative;
 	background-color:#87CEFA;
@@ -276,6 +295,9 @@ header{
 	width:165px;
 	float:left;
 	margin-left:10px;
+}
+.menu-content1:hover{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .menu-content2{
 	position: relative;
@@ -286,6 +308,9 @@ header{
 	margin-left:10px;
 	margin-top:20px;
 }
+.menu-content2:hover{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 .menu-content3{
 	position: relative;
 	background-color:#87CEFA;
@@ -293,6 +318,9 @@ header{
 	width:165px;
 	float:left;
 	margin-top:20px;
+}
+.menu-content3:hover{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .menu-div{
 	position:absolute;
@@ -328,11 +356,13 @@ header{
 	
 }
 .menu-bottom{
+	float:inline-end;
+	margin-top:50px;
 	height: 60px;
 	width:100%;
-	padding-bottom: 0%;
 	text-align:center;
 	line-height:60px;
+	
 	
 }
 .next-page{
@@ -385,6 +415,9 @@ header{
 	border-width:2px;
     border-style:solid;
     border-color:black;
+	box-shadow: 3px 3px 10px
+    rgba(2, 2, 2, 0.5);
+	background-color: white;
 
 }
 .history-all{
@@ -450,6 +483,9 @@ header{
 	border-width:2px;
     border-style:solid;
     border-color:black;
+	box-shadow: 3px 3px 10px
+    rgba(2, 2, 2, 0.5);
+	background-color: white;
 }
 #top-menu{
 	height:50px;
@@ -654,6 +690,9 @@ header{
 	border-width:2px;
     border-style:solid;
     border-color:black;
+	box-shadow: 3px 3px 10px
+    rgba(2, 2, 2, 0.5);
+	background-color: white;
 	
 }
 .comment-title{
