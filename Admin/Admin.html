@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     </head>
     <body>
+        <input type="checkbox" id="nav-toggle">
         <div class="sidebar">
             <div class="sidebar-brand">
-                <h2><span class="lab la-accusoft"></span>Accusoft</h2>
+                <h2><span class="lab la-accusoft"></span><span>Accusoft</span></h2>
             </div>
             <div class="sidebar-menu">
                 <ul>
@@ -48,7 +49,7 @@
         <div class="main-content">
             <header>
                     <h2>
-                        <label for="">
+                        <label for="nav-toggle">
                             <span class="las la-bars"></span>
                         </label>
                         Dashboard
@@ -118,68 +119,92 @@
 
                             </div>
                             <div class="card-body">
-                                <table width="100%">
-                                    <thead>
-                                        <tr>
-                                            <td>Projects Title</td>
-                                            <td>Department</td>
-                                            <td>Status</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>UI/UX Design</td>
-                                            <td>UI Team</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                review
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Web development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                in progress
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ushop app</td>
-                                            <td>Mobile Team</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                pending
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>UI/UX Design</td>
-                                            <td>UI Team</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                review
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Web development</td>
-                                            <td>Frontend</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                in progress
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ushop app</td>
-                                            <td>Mobile Team</td>
-                                            <td>
-                                                <span class="status"></span>
-                                                pending
-                                            </td>
-                                        </tr>
-                                    </tbody>
-
-                                </table>
+                                <div class="table-responsive">
+                                    <table width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td>Projects Title</td>
+                                                <td>Department</td>
+                                                <td>Status</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>UI Team</td>
+                                                <td>
+                                                    <span class="status purple"></span>
+                                                    review
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web development</td>
+                                                <td>Frontend</td>
+                                                <td>
+                                                    <span class="status pink"></span>
+                                                    in progress
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ushop app</td>
+                                                <td>Mobile Team</td>
+                                                <td>
+                                                    <span class="status orange"></span>
+                                                    pending
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>UI Team</td>
+                                                <td>
+                                                    <span class="status purple"></span>
+                                                    review
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web development</td>
+                                                <td>Frontend</td>
+                                                <td>
+                                                    <span class="status pink"></span>
+                                                    in progress
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ushop app</td>
+                                                <td>Mobile Team</td>
+                                                <td>
+                                                    <span class="status orange"></span>
+                                                    pending
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td>UI/UX Design</td>
+                                                <td>UI Team</td>
+                                                <td>
+                                                    <span class="status purple"></span>
+                                                    review
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web development</td>
+                                                <td>Frontend</td>
+                                                <td>
+                                                    <span class="status pink"></span>
+                                                    in progress
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ushop app</td>
+                                                <td>Mobile Team</td>
+                                                <td>
+                                                    <span class="status orange"></span>
+                                                    pending
+                                                </td>
+                                            </tr>                
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="customers">
@@ -190,8 +215,8 @@
 
                             </div>
                             <div class="card-body">
-                                <div class="customers">
-                                    <div>
+                                <div class="customer">
+                                    <div class="info">
                                         <img src="avt.jpg" alt="" width="40px" height="40px"/>
                                         <div>
                                             <h4>Wiliamhn</h4>
@@ -199,14 +224,14 @@
                                         
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="contact">
                                         <span class="las la-user-circle"></span>
                                         <span class="las la-comment"></span>
                                         <span class="las la-phone"></span>
                                     </div>
                                 </div> 
-                                <div class="customers">
-                                    <div>
+                                <div class="customer">
+                                    <div class="info">
                                         <img src="avt.jpg" alt="" width="40px" height="40px"/>
                                         <div>
                                             <h4>Wiliamhn</h4>
@@ -214,14 +239,14 @@
                                         
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="contact">
                                         <span class="las la-user-circle"></span>
                                         <span class="las la-comment"></span>
                                         <span class="las la-phone"></span>
                                     </div>
-                                </div>
-                                <div class="customers">
-                                    <div>
+                                </div> 
+                                <div class="customer">
+                                    <div class="info">
                                         <img src="avt.jpg" alt="" width="40px" height="40px"/>
                                         <div>
                                             <h4>Wiliamhn</h4>
@@ -229,14 +254,14 @@
                                         
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="contact">
                                         <span class="las la-user-circle"></span>
                                         <span class="las la-comment"></span>
                                         <span class="las la-phone"></span>
                                     </div>
-                                </div>    
-                                <div class="customers">
-                                    <div>
+                                </div> 
+                                <div class="customer">
+                                    <div class="info">
                                         <img src="avt.jpg" alt="" width="40px" height="40px"/>
                                         <div>
                                             <h4>Wiliamhn</h4>
@@ -244,14 +269,14 @@
                                         
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="contact">
                                         <span class="las la-user-circle"></span>
                                         <span class="las la-comment"></span>
                                         <span class="las la-phone"></span>
                                     </div>
-                                </div>    
-                                <div class="customers">
-                                    <div>
+                                </div> 
+                                <div class="customer">
+                                    <div class="info">
                                         <img src="avt.jpg" alt="" width="40px" height="40px"/>
                                         <div>
                                             <h4>Wiliamhn</h4>
@@ -259,12 +284,13 @@
                                         
                                         </div>
                                     </div>
-                                    <div>
+                                    <div class="contact">
                                         <span class="las la-user-circle"></span>
                                         <span class="las la-comment"></span>
                                         <span class="las la-phone"></span>
                                     </div>
-                                </div>                                 
+                                </div> 
+                                                             
                             </div>
                     </div>
                 </div>
