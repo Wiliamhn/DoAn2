@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+	<title>Light Novel</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="Css/Truyentheodoi.css" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script type="javascript" src="myscript.js"></script>
+    <script>  
+          $(document).ready(function(){
+            var cart = sessionStorage.getItem("cart");
+            cartProducts = "["+cart+"]";
+            products = JSON.parse(cartProducts);
+            var amount = products.length;
+            //alert(amount);
+            //$("#cart-amount").text("Giỏ hàng ("+amount+")");
+            
+            var table = `
+            <table cellpadding="5" cellspacing="0">
+                
+                    <tr>
+                        <th style="font-family:Arial, Helvetica, sans-serif;"">STT</th>
+                        <th style="font-family:Arial, Helvetica, sans-serif;">Ảnh</th>
+                        <th style="font-family:Arial, Helvetica, sans-serif;"">Tên sản phẩm</th>
+                        <th style="font-family:Arial, Helvetica, sans-serif;"">Xóa</th>
+                    </tr>
+                
+            `;
+            // alert(table);
+            for(var i=0; i<amount; i++){
+                var row = `
+                
+                    <tr >
+                        
+                        <td style="padding-left:10px ; font-weight:500 ; font-size:20px">${i+1}</td>
+                        <td style="width: 150px;height:80px;"><img style="width: 80px;height:80px;margin-left:30px" src="${products[i].img}" ></td>
+                        <td style="width:600px;text-align:center">${products[i].name}</td>
+                        <td>
+                            <button id="chot"style="height:30px;color:red; background-color:rgb(26, 246, 22)"><i class='bx bx-x-circle'></i>Bỏ theo dõi</button>
+                        </td>
+                    </tr>
+               
+                `;
+                
+                table += row;
+            }
+            
+            table += `</table>`;
+            
+            $("#content").html(table); 	
+
+            $("#chot").click(function(){
+                sessionStorage.clear();
+                location.reload();
+            })	
+    
+    });
+    </script>
+    <script>
+                  function myFunctions() {
+  document.getElementById("myDrop").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbutton')) {
+    var dropdowns = document.getElementsByClassName("drop-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</head>
+<body>
+	<header>
+		<div class="ngoc headed">
+			<img src="Image/logo.jpg" href="#" alt="logo" class="logo" />
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			   <div class="drop">
+			     	<button onclick="myFunctions()" class="dropbutton" src="avt.jpg"><img src="Image/avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="UserSetting.html">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header><br /><br /><br /><br /><br />
+    <section>
+    <section>
+        <div id="content">
+
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cửa hàng trang sức PNJ</title>
+    <link rel ="stylesheet" href="doan.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+ 
+  <body>
+   
+    <header>
+   
+  
+    </header>
+    
+    <header>
+        <div id="header">
+        <nav class ="containerx">
+        <a href="#">
+          <img src="logoweb.png" alt="logo" width="200px" height="100px">
+        </a> 
+        <ul id="main-menu">
+          <li><a href="">Trang Sức</a>
+            <ul class="sub-menu">
+              <li><a href="">Nhẫn</a>
+                <ul class="sub-menu">
+                    <ul class="sub-menu">   
+                    </ul>
+                  </li> 
+                </ul>
+              </li>
+              <li><a href="">Dây Chuyền</a>
+           
+              </li>
+              <li><a href="">Đồng Hồ</a>
+               
+              <li><a href="">Vòng Cổ</a>
+              
+              <li><a href="">Vòng Tay</a>
+                
+              </li>
+            </ul>
+          </li>
+          <li><a href="">Trang Sức Cưới</a></li>
+          <li><a href="">Quà Tặng</a></li>
+          <li><a href="">Thương Hiệu</a></li>
+       
+      
+
+        <ul id="main-menu">
+          <li><a href=""><img src ="logosignin.png" width="50px" height="50px" ></a>
+            <ul class="sub-menu">
+              <li><a href="signup.html">Đăng Kí</a>
+             <li><a href="login.html">Đăng Nhập</a>                    
+            </ul>                
+          </li>
+     
+           <li><a href=""><i class='bx bx-cart-alt'></i></a>
+            <a id="cart" onclick="showcart()" style="font-size: 15px;cursor: pointer;margin-left: 10px;"><i class="fa-solid fa-cart-plus" style="font-size: 30px;margin-top: 30px;margin-left: 30px;cursor: pointer;position: relative;"></i><h3 class="cartNo" style="position: absolute;"></h3></a>
+                <div class="box">
+                    <div class="container-2">  
+                    </div>
+                </div>
+                <div id="showcart">
+                    <a id="cart" onclick="showcart()"><i class="fa-solid fa-circle-xmark" style="cursor: pointer;float: left;font-size: 25px;"></i><b style="cursor: pointer;float: left;font-size: 20px;margin-left: 10px;">Thoát</b></a><br><br>
+                    <h2>Giỏ Hàng</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>SL</th>
+                                <th>Chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <div class="price-total" style="text-align: right;">
+                        <p style="font-weight: bold;font-size: 20px;">Tổng Tiền:<span>0</span><sup>đ</sup></p>
+                    </div>
+                    <input type="button" value="Chốt Đơn" onclick="window.location.href='thanhtoan.html'" style="border-radius: 5px;width: 200px;height: 50px;margin-top: 50px;font-size: 15px;border: none;cursor: pointer;">
+                    <input type="button" value="Xem chi tiết đơn hàng" onclick="window.location.href='http://127.0.0.1:5500/SHOPCART/shopcart.html'" style="border-radius: 5px;width: 150px;height: 50px;margin-top: 50px;font-size: 15px;border: none;cursor: pointer;">
+                </div>
+                
+        
+      
+       
+        </nav>
+    </div>
+    </header>
+ 
+    <div id="page-wrapper">
+      <img class="mySlides" src="im1.jpg" width="1110px" height="444px">
+      <img class="mySlides" src="im2.jpg" width="1110px" height="444px">
+      <img class="mySlides" src="im3.jpg" width="1110px" height="444px">
+      <img class="mySlides" src="im4.jpg" width="1110px" height="444px">
+      <img class="mySlides" src="im5.jpg" width="1110px" height="447px">
+      <img class="mySlides" src="im6.jpg" width="1110px" height="444px">     
+    </div>
+    <div id="page-wrapper1">
+      <img class="mySlides1" src="img4.jpg" width="540px" height="270px">      
+      <img class="mySlides2"  style="margin-left: 25px" src="img3.jpg" width="540px" height="270px">
+    </div>
+    <div id="block-home" width="1110px" height="335px">
+        <div class="block-header" width="1110px" height="11px">
+        <span id="block-header-title">Danh mục sản phẩm</span>
+        </div>
+        <div class ="danhmucsanpham">
+          <a class="link-a" href="">
+            <div class="shape" ></div>
+            <img src="sp1x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ</div><div class="sm">Vòng tay vàng trắng ý<br>01276ww00</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape" ></div>
+            <img src="sp2x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ</div><div class="sm">Vòng tay vàng trắng 18K<br>01275ww00</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape"></div>
+            <img src="sp3x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ</div><div class="sm">Vòng tay vàng đính đá 18K<br>01277ww01</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape" ></div>
+            <img src="sp4x.png" alt=""height="177px" width="150px">
+            <div class="text"><div>PNJ </div><div class="sm">Vòng tay vàng đính đá CZ PNJ <br>01287ww03</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape"></div>
+            <img src="sp5x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ </div><div class="sm">Vòng tay vàng 14K<br> ATXM10211</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape"></div>
+            <img src="sp6x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ</div><div class="sm">Vòng tay kim cương vàng trắng<br> AMD12083x</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape" ></div>
+            <img src="sp7x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ </div><div class="sm">Vòng tay vàng dây mảnh, Dịu dàng <br>01289ww01</div></div>
+        </a>
+        <a class="link-a" href="">
+            <div class="shape" ></div>
+            <img src="sp8x.png" alt="" height="177px" width="150px">
+            <div class="text"><div>PNJ</div><div class="sm">hiện đại, thoải mái,<br>dành cho trẻ con </div></div>
+        </a>
+        
+        </div>
+    </div>  
+
+    <br></br>
+        <ul class="product">
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp10x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Nhẫn Kim Cương Trắng 18k PNJ 172</a>
+              <br>
+              <span>100.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp1x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Nhẫn Kim Cương 24K Mặt Đá PNJ XXZ</a>
+              <br>
+              <span >700.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+        
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp2x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng tay Kim Cương Mặt Xoàn PNJ 17z</a>
+              <br>
+              <span >100.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp3x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng tay vàng đính đá PNJ 192</a>
+              <br>
+              <span >100.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="product">
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp20x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Nhẫn Kim Cương Trắng 18k PNJ 172</a>
+              <br>
+              <span>910.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp21x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng tay bạc đính đá STYLE 24K PNJ XXZ</a>
+              <br>
+              <span >700.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+        
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp22x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng tay Kim Cương Đính Hạt PNJ 17z</a>
+              <br>
+              <span >820.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+          
+        <div class="product-top">
+          <img src="sp23x.png"  width="111px" height="120px" alt="Image 1" style=" font-size: 14px; line-height: 14px;">
+
+          <div style="margin-top: 10px;">
+              <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng tay bạc Silver đính đá PNJ 192</a>
+              <br>
+              <span >350.000 </span>
+          </div>
+          <button class="buy-item">Mua ngay</button>
+          <input class="quantity-input" type="number" value="1" min="0">
+         </div>
+        </div>
+            </div>
+          </li>
+        </ul>
+        <div class="read-more" >
+          <a href="" class ="btnXemthem">Xem thêm</a>
+        </div>
+
+        <div class="block-header" width="1110px" height="11px">
+          <span id="block-header-title">Sản phẩm giảm giá</span>
+          </div>
+          <ul class="product">
+            <li>
+              <div class="product-item">
+          <div class="product-top">
+            <div class="percent"><p>-60%</p></div>
+            <img src="sp4x.png"  width="111px" height="120px" alt="Image 4" style=" font-size: 14px; line-height: 14px;">
+  
+            <div style="margin-top: 10px;">
+                <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Nhẫn Vàng Đính Kim Cương PNJ 192</a>
+                <br>
+                <span >100.000 </span>
+            </div>
+            <button class="buy-item">Mua ngay</button>
+            <input class="quantity-input" type="number" value="1" min="0">
+           </div>
+          </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-item">
+          <div class="product-top">
+            <div class="percent"><p>-30%</p></div>
+            <img src="sp5x.png"  width="111px" height="120px" alt="Image 5" style=" font-size: 14px; line-height: 14px;">
+  
+            <div style="margin-top: 10px;">
+                <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Vòng Tay Kim Cương Đính Đá PNJ 192</a>
+                <br>
+                <span >100.000 </span>
+            </div>
+            <button class="buy-item">Mua ngay</button>
+            <input class="quantity-input" type="number" value="1" min="0">
+           </div>
+          </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-item">
+          <div class="product-top">
+            <div class="percent"><p>-50%</p></div>
+            <img src="sp6x.png"  width="111px" height="120px" alt="Image 6" style=" font-size: 14px; line-height: 14px;">
+  
+            <div style="margin-top: 10px;">
+                <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Nhẫn Kim Cương Trắng 11K PNJ 192</a>
+                <br>
+                <span >100.000 </span>
+            </div>
+            <button class="buy-item">Mua ngay</button>
+            <input class="quantity-input" type="number" value="1" min="0">
+           </div>
+          </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-item">
+          <div class="product-top">
+            <div class="percent"><p>-70%</p></div>
+            <img src="sp7x.png"  width="111px" height="120px" alt="Image 7" style=" font-size: 14px; line-height: 14px;">
+  
+            <div style="margin-top: 10px;">
+                <a style="font-size: 15px;font-weight: bold;cursor: pointer;margin-left: 20px;">Lắc Tay Vàng Cho Trẻ Em PNJ 211</a>
+                <br>
+                <span >400.000 </span>
+            </div>
+            <button class="buy-item">Mua ngay</button>
+            <input class="quantity-input" type="number" value="1" min="0">
+           </div>
+          </div>
+              </div>
+            </li>
+          </ul>
+       
+        
+
+        <div class="read-more" >
+          <a href="" class ="btnXemthem">Xem thêm</a>
+        </div>
+      <div id="scroll-top">
+        <a href="#" class="scroll-to-top">
+         <img src="muiten.jpg" style="width: 50px; height: 50px; border-radius: 50%; align-items: center; justify-items: center; position: fixed; bottom: 40px; right: 20px; ">
+        </a>
+      </div>
+     
+    <div id="footer">
+      <div class="link-content">
+          <h3>Thông Tin Liên Hệ</h3>
+          <ul>
+           
+              <li><a href="">Giới thiệu store</a></li>
+              <li><a href="">Chăm sóc khách hàng</a></li>
+              <li><a href="">Tin tức</a></li>
+              <li><a href="">Liên hệ hợp tác</a></li>
+              <li><a href="">Ý kiến khách hàng</a></li>
+          </ul>
+      </div>
+
+      <div class="link-content">
+          <h3>Dịch Vụ - Hỗ Trợ</h3>
+          <ul>
+              <li><a href="">Mua hàng trả góp</a></li>
+              <li><a href="">Chính sách bảo hành</a></li>
+              <li><a href="">Chính sách bảo mật</a></li>
+              <li><a href="">Chính sách giải quyết khiếu nại</a></li>
+              <li><a href="">Câu hỏi thường gặp</a></li>
+          </ul>
+      </div>
+
+      <div class="link-content">
+          <h3>Thông tin khuyến mãi</h3>
+          <ul>
+              <li><a href="">Sản phẩm bán chạy</a></li>
+              <li><a href="">Sản phẩm khuyến mãi</a></li>
+              <li><a href="">Hàng thanh lý</a></li>
+              <li><a href="">Liên hệ khối văn phòng</a></li>
+          </ul>
+      </div>
+      <div class="link-content">
+        <div class="icon">
+          <h3>Follow us</h3>
+          <a href="https://www.instagram.com/tnmminh/" >
+            <img src="icon1.jpg" width="50px" height="50px">
+          </a>
+          <a href="https://www.facebook.com/minh.tnm/" >
+            <img src="icon2.jpg" width="50px" height="50px">
+          </a>
+          <a href="https://www.facebook.com/minh.tnm/" >
+            <img src="icon3.jpg" width="50px" height="50px">
+          </a>
+          </div>
+          
+
+          <div class="footer-bottom">
+            <div class="footer-banquyen">
+                <div class="banquyen" style="font-size: 20px; color: #ffffff;">Bản quyền của Công ty TNHH Thương mại & Tin học Tú Nguyệt</div>
+            </div>
+        </div>
+      </div>
+      
+      
+  </div>
+
+   <script src="doan.js"></script>
+   <script>
+    
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1};
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Đổi ảnh sau mỗi 2 giây
+  }
+  
+  function buy() {
+    // Xử lý sự kiện nhấp vào nút "Mua hàng".
+
+    // Mở một bảng phản hồi đánh giá.
+    var feedbackDialog = document.createElement("dialog");
+    feedbackDialog.innerHTML = `
+      <form>
+        <label for="name">Tên:</label>
+        <input type="text" id="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="feedback">Phản hồi:</label>
+        <textarea id="feedback"></textarea>
+
+        <button type="submit">Gửi</button>
+      </form>
+    `;
+    document.body.appendChild(feedbackDialog);
+
+    feedbackDialog.showModal();
+  }
+
+  function showcart(){
+    var x= document.getElementById("showcart")
+    if(x.style.display=="none"){
+        
+    } 
+    else{
+        x.style.display ="none"
+    }
+}
+
+const btn = document.querySelectorAll(".buy-item")
+//console.log(btn)
+ btn.forEach(function(button,index){
+  button.addEventListener("click",function(event){{
+      var btnItem = event.target
+      var product = btnItem.parentElement
+      //console.log(product) 
+      var productImg = product.querySelector("img").src
+      //console.log(productImg)
+      var productName = product.querySelector("a").innerText
+      //console.log(productName)
+      var productPrice = product.querySelector("span").innerHTML
+      //console.log(productPrice)
+      //console.log(productImg,productName,productPrice)
+      addcart(productPrice,productImg,productName)
+  }})
+})
+function addcart(productPrice,productImg,productName){
+    var addtr = document.createElement("tr")
+    var cartItem = document.querySelectorAll("tbody tr")
+    for(var i=0;i<cartItem.length;i++){
+        var productT = document.querySelectorAll(".title")
+        if (productT[i].innerHTML == productName){
+        alert("Sản phẩm của bạn đã có trong giỏ hàng")
+        return
+        }
+    }
+    var trcontent = '<tr><td style="display: flex;align-items: center;"><img src='+productImg+' style="width: 70px;"><a class="title">'+productName+'</a></td><td><span>'+productPrice+'</span></td><td><input style="outline: none;width: 30px;cursor: pointer;" type="number" value=1 , min="1"></td><td style="cursor: pointer;"><i class="fa-solid fa-trash-can"></i><a class ="xoa">Xóa</a></td></tr>'
+    addtr.innerHTML = trcontent
+    var cartTable = document.querySelector("tbody")
+    // console.log(cartTable)
+    cartTable.append(addtr)
+    carttotal()
+    deletecart()
+}
+function carttotal(){
+  var cartItem = document.querySelectorAll("tbody tr")
+  totalC=0
+  //console.log(cartItem.length)
+  for(var i=0;i<cartItem.length;i++){
+    var inputValue = cartItem[i].querySelector("input").value
+    //console.log(inputValue)
+    var productPrice = cartItem[i].querySelector("span").innerHTML
+    //console.log(productPrice)
+    totalA = inputValue*productPrice*1000
+    //console.log(totalA)
+    totalC = totalC + totalA
+  }
+  var carttotalA = document.querySelector(".price-total span")
+  carttotalA.innerHTML = totalC.toLocaleString('de-DE')
+  inputchange()
+  
+}
+function inputchange(){
+  var cartItem = document.querySelectorAll("tbody tr")
+  for(var i=0;i<cartItem.length;i++){
+      var inputValue = cartItem[i].querySelector("input")
+      inputValue.addEventListener("change",function(){
+          carttotal()
+      })
+      
+  }
+}
+
+function deletecart(){
+    var cartItem = document.querySelectorAll("tbody tr")
+    //console.log(cartItem)
+    for(var i=0;i<cartItem.length;i++){
+        var productDelete = document.querySelectorAll(".xoa")
+        productDelete[i].addEventListener("click",function(event){
+            var xoa=event.target
+            var Delete =xoa.parentElement.parentElement
+            //console.log(Delete)
+            Delete.remove()
+            carttotal()
+        })
+    }
+}
+
+
+
+   </script>
+
+</body>
+</html>    

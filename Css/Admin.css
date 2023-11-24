@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 :root{
-    --main-color:#DD2F6E;
+    --main-color:#10b18e;
     --color-dark:#1D2231;
     --text-grey: #8390A2;
 }
@@ -54,7 +54,7 @@
 }
 .sidebar-menu li{
     width: 100%;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
     padding-left: 1rem;
 
 }
@@ -139,6 +139,61 @@ main{
     grid-gap: 2rem;
     margin-top: 1rem;
 }
+.themsuaxoa-buttonbox{
+    display: grid;
+    grid-template-columns: repeat(5, 20fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.themsuaxoa{
+    display: block;
+    height: auto;
+    margin-top: 1rem;
+    gap: 2rem;
+    background: #fff;
+    grid-template-columns: repeat(4, 1fr);
+}
+.themsuaxoa-right{
+    float:right;
+    width: 45%;
+    margin-top: 5px;
+    height: 300px;
+    
+}
+.themsuaxoa-right span{
+    color: #000;
+    padding-top: 10px;
+    font-size: 17px;
+    font-family: "Roboto",sans-serif;
+}
+
+.themsuaxoa-right img{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.themsuaxoa label{
+    padding :30px 15px;
+    margin-top: 10px;
+}
+.themsuaxoa-grid{
+    margin-top: 3.5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 100% auto;
+}
+.themsuaxoa-grid-img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+.themsuaxoa-grid-truyen{
+    height: 50px;
+    width: 34px;
+}
 .card-single{
     display: flex;
     justify-content: space-between;
@@ -164,7 +219,7 @@ main{
     margin-top: 3.5rem;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 65% auto;
+    grid-template-columns: 60% auto;
 }
 .card{
     background: #fff;
@@ -288,4 +343,65 @@ tr td:last-child {
 #nav-toggle:checked ~ .main-content header{
     width: calc(100% - 70px);
     left: 70px;
+}
+
+
+.themsuaxoa-input, select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10px;
+  }
+  
+.themsuaxoa-btn {
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 10px;
+    border: none; 
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .themsuaxoa-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .file{
+    margin-top: 5px;
+    color: transparent;
+}
+.file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.file::before{
+    content: 'Upload ảnh';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.file:hover::before{
+    border-color: black;
+}
+.file:active {
+    outline: 0;
+}
+.file:active::before {
+   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
 }

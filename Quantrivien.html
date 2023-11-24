@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>admin page</title>
+    <link rel="stylesheet" type="text/css" href="Css/Admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    </head>
+    <body>
+        <input type="checkbox" id="nav-toggle">
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <h2><span class="lab la-book-tanakh"></span><span>Light Novel</span></h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="Admin.html" ><span class="las la-igloo"></span>
+                            <span>Bảng điều khiển</span></a>
+                    </li>
+                    <li>
+                        <a class="active"><span class="las la-users"></span>
+                            <span>Quản trị viên</span></a>
+                    </li>
+                    <li>
+                        <a href="Dangtruyen.html"><span class="las la-book-open"></span>
+                            <span>Đăng truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bxs-book-add" ></span>
+                            <span>Duyệt đăng truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bx-purchase-tag-alt"></span>
+                            <span>Thể loại truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-user-circle"></span>
+                            <span>Tác giả</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bx-news"></span>
+                            <span>Tin tức</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bxs-bar-chart-alt-2"></span>
+                            <span>Thống kê</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                    <h2>
+                        <label for="nav-toggle">
+                            <span class="las la-bars"></span>
+                        </label>
+                        Quản trị viên
+                    </h2>
+                    <div class="search-wrapper">
+                        <span class="la la-search"></span>
+                        <input type="search" placeholder="Search here" />
+                    </div>
+                    <div class="user-wrapper">
+                        <img src="Image/avthn.jpg" width="40px" height="40px" alt=""/>
+                        <div>
+                            <h4>Hai Ngoai</h4>
+                            <small>Admin</small>
+                        </div>
+                    </div>
+            
+            </header>
+            <main>
+                <div class="themsuaxoa">
+                    <div class="themsuaxoa-right">
+                        <span>Ảnh đại diện</span><br>
+                        <img src="Image/avt.jpg" alt="" class="avatarchange-img"  /><br>
+                        <input type="file" class="file" name="file">
+                    </div>
+                    <label for="themsuaxoa-input">Mã quản trị viên</label><br>
+                     <input type="text" class="themsuaxoa-input" placeholder="Mã quản trị viên"><br>
+
+                     <label for="themsuaxoa-input">Họ và tên</label><br>
+                     <input type="text" class="themsuaxoa-input" placeholder="Họ và tên"><br>
+
+                    <label for="themsuaxoa-input">Số điện thoại</label><br>
+                    <input type="text" class="themsuaxoa-input"  placeholder="Số điện thoại"><br>
+
+                    <label for="country">Công việc</label><br>
+                    <select id="country" name="country">
+                        <option value="australia">Design</option>
+                        <option value="canada">Web development</option>
+                        <option value="usa">Tester</option>
+                    </select><br>
+                     <div class="themsuaxoa-buttonbox">
+                           <input type="submit" value="Thêm" class="themsuaxoa-btn">
+                           <input type="submit" value="Sửa" class="themsuaxoa-btn">
+                           <input type="submit" value="Xóa" class="themsuaxoa-btn">
+                          
+                    </div>  
+                 
+                </div>
+                <div class="themsuaxoa-grid">
+                    <div class="poprojects">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Dang sách quản trị viên</h3>
+                                <button>Xem tất cả <span class="la las-arrow-right"></span></button>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td>Ảnh đại diện</td>
+                                                <td>Mã quản trị viên</td>
+                                                <td>Họ và tên</td>
+                                                <td>Số điện thoại</td>
+                                                <td>Vai trò</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td><img src="Image/avthn.jpg" alt="" class="themsuaxoa-grid-img"  /><br></td>
+                                                <td>10121508</td>
+                                                <td>Wiliamhn</td>
+                                                <td>0912237945</td>
+                                                <td>
+                                                    <span class="status purple"></span>
+                                                    CEO Ecerpt
+                                                </td>
+                                            </tr>
+                                            <tr><td><img src="Image/avt1.jpg" alt="" class="themsuaxoa-grid-img"  /><br></td>
+                                                <td>15426458</td>
+                                                <td>Thùy Trâm</td>
+                                                <td>0934478887</td>
+                                                <td>
+                                                    <span class="status pink"></span>
+                                                    Web development
+                                                </td>
+                                            </tr>
+                                            <tr><td><img src="Image/avt2.jpg" alt="" class="themsuaxoa-grid-img"  /><br></td>
+                                                <td>10143641</td>
+                                                <td>Đức Hiếu</td>
+                                                <td>0942547343</td>
+                                                <td>
+                                                    <span class="status orange"></span>
+                                                    design
+                                                </td>
+                                            </tr>                                                                                                
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </main>
+        </div>
+        <script src="jquery/jquery.js"></script>
+        <script>
+             const image = document.querySelector(".avatarchange-img"),
+        input=document.querySelector(".file");
+
+        input=addEventListener("change",()=> {
+            image.src=URL.createObjectURL(input.files[0]);
+        });
+        </script>
+    </body>
+ 
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>admin page</title>
+    <link rel="stylesheet" type="text/css" href="Css/Admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    </head>
+    <body>
+        <input type="checkbox" id="nav-toggle">
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <h2><span class="lab la-book-tanakh"></span><span>Light Novel</span></h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="Admin.html" ><span class="las la-igloo"></span>
+                            <span>Bảng điều khiển</span></a>
+                    </li>
+                    <li>
+                        <a href="Quantrivien.html"><span class="las la-users"></span>
+                            <span>Quản trị viên</span></a>
+                    </li>
+                    <li>
+                        <a  class="active"><span class="las la-book-open"></span>
+                            <span>Đăng truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bxs-book-add" ></span>
+                            <span>Duyệt đăng truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bx-purchase-tag-alt"></span>
+                            <span>Thể loại truyện</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-user-circle"></span>
+                            <span>Tác giả</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bx-news"></span>
+                            <span>Tin tức</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="bx bxs-bar-chart-alt-2"></span>
+                            <span>Thống kê</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                    <h2>
+                        <label for="nav-toggle">
+                            <span class="las la-bars"></span>
+                        </label>
+                        Quản trị viên
+                    </h2>
+                    <div class="search-wrapper">
+                        <span class="la la-search"></span>
+                        <input type="search" placeholder="Search here" />
+                    </div>
+                    <div class="user-wrapper">
+                        <img src="Image/avthn.jpg" width="40px" height="40px" alt=""/>
+                        <div>
+                            <h4>Hai Ngoai</h4>
+                            <small>Admin</small>
+                        </div>
+                    </div>
+            
+            </header>
+            <main>
+                <div class="themsuaxoa">
+                    <div class="themsuaxoa-right">
+                        <span style="margin-left:65px;" >Ảnh bìa</span><br>
+                        <img src="Image/back-change.jpg" alt="" class="avatarchange-img" style=" height: 220px; width: 160px;" /><br>
+                        <input type="file" class="file" name="file"style="margin-left:50px;">
+                    </div>
+                    <label for="themsuaxoa-input">Mã truyện</label><br>
+                     <input type="text" class="themsuaxoa-input" placeholder="Mã truyện"><br>
+
+                     <label for="themsuaxoa-input">Tên truyện</label><br>
+                     <input type="text" class="themsuaxoa-input" placeholder="Tên truyện"><br>
+
+                    <label for="themsuaxoa-input">Miêu tả</label><br>
+                    <input type="text" class="themsuaxoa-input"  placeholder="Miêu tả"><br>
+
+                    <label for="country">Thể loại</label><br>
+                    <select id="country" name="country">
+                        <option value="australia">School life</option>
+                        <option value="canada">Drama</option>
+                        <option value="usa">Horrhor</option>
+                    </select><br>
+                     <div class="themsuaxoa-buttonbox">
+                           <input type="submit" value="Thêm" class="themsuaxoa-btn">
+                           <input type="submit" value="Sửa" class="themsuaxoa-btn">
+                           <input type="submit" value="Xóa" class="themsuaxoa-btn">
+                          
+                    </div>  
+                 
+                </div>
+                <div class="themsuaxoa">
+                    <label for="themsuaxoa-input">Chappter</label><br>
+                     <input type="text" class="themsuaxoa-input" placeholder="Chappter"><br>
+
+                     <label for="themsuaxoa-input" >Nội dung</label><br>
+                     <textarea rows="8" class="themsuaxoa-input"></textarea><br>
+
+                    
+                     <div class="themsuaxoa-buttonbox">
+                           <input type="submit" value="Thêm" class="themsuaxoa-btn">
+                           <input type="submit" value="Sửa" class="themsuaxoa-btn">
+                           <input type="submit" value="Xóa" class="themsuaxoa-btn">
+                          
+                    </div>  
+                 
+                </div>
+                <div class="themsuaxoa-grid">
+                    <div class="poprojects">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Truyện đăng gần đây</h3>
+                                <button>Xem tất cả <span class="la las-arrow-right"></span></button>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table width="100%">
+                                        <thead>
+                                            <tr>
+                                                <td>Ảnh bìa</td>
+                                                <td>Mã truyện</td>
+                                                <td>Tên truyện</td>
+                                                <td>Chappter</td>                    
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td><img src="Image/tr3.webp" alt="" class="themsuaxoa-grid-truyen"  /><br></td>
+                                                <td>10121508</td>
+                                                <td>Vùng đất của gió</td>
+                                                <td>Chappter 79</td>
+                                                
+                                            </tr>
+                                            <tr><td><img src="Image/tr3.webp" alt="" class="themsuaxoa-grid-truyen"  /><br></td>
+                                                <td>10121508</td>
+                                                <td>Vùng đất của gió</td>
+                                                <td>Chappter 78</td>
+                                                
+                                            </tr>
+                                            <tr><td><img src="Image/tr3.webp" alt="" class="themsuaxoa-grid-truyen"  /><br></td>
+                                                <td>10121508</td>
+                                                <td>Vùng đất của gió</td>
+                                                <td>Chappter 77</td> 
+                                            </tr>                                                                                             
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </main>
+        </div>
+        <script src="jquery/jquery.js"></script>
+        <script>
+             const image = document.querySelector(".avatarchange-img"),
+        input=document.querySelector(".file");
+
+        input=addEventListener("change",()=> {
+            image.src=URL.createObjectURL(input.files[0]);
+        });
+        </script>
+    </body>
+ 
+</html>

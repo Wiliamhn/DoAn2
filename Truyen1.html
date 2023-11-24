@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+	<title>Light Novel</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="Css/Truyen1.css" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="java/myscript.js"></script>
+    <script>
+        function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Đọc thêm";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Thu gọn";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+      <script>
+        $(document).ready(function(){
+            $(".Theodoi").click(function(){					
+					var pImg = $(this).parents().find(".top-part-img-con").attr("src");
+					var pName = $(this).parents().find("#series-name").text();
+					var product = {
+						"img":pImg,
+						"name":pName,
+					};
+					
+					//alert(pImg +" "+pName+" "+pPrice);
+					var cart = sessionStorage.getItem("cart");
+					var cartProducts = "";
+					if(cart!=null){
+						cartProducts = cart +"," + JSON.stringify(product);						
+					} else
+						cartProducts = JSON.stringify(product);
+					sessionStorage.setItem("cart",cartProducts);	
+									
+				});
+        });
+       </script>
+       <script>
+        
+         function change() // no ';' here
+{
+    var elem = document.getElementById("myButton1");
+    if (elem.value=="Theo dõi") {
+        elem.value = "Hủy theo dõi";
+        elem.classList.add('active');
+    }
+    else {
+        elem.value = "Theo dõi";
+        elem.classList.remove('active');
+}}
+          </script>
+       <script>
+            function myFunctions() {
+  document.getElementById("myDrop").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbutton')) {
+    var dropdowns = document.getElementsByClassName("drop-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+       </script>
+</head>
+<body>
+	<header>
+		<div class="ngoc headed">
+			<img src="Image/logo.jpg" href="#" alt="logo" class="logo" />
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			   <div class="drop">
+			     	<button onclick="myFunctions()" class="dropbutton" src="avt.jpg"><img src="Image/avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="#">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="Truyentheodoi.html">Truyện theo dõi <i class='bx bxs-book-bookmark' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header><br /><br /><br /><br /><br />
+    <section>
+        <div class="img-logo2">
+			<img src="Image/logo3.png" alt="Logo" width="100%" height="200" id="logo2" />
+		</div>
+        <div class="menu">
+            <div class="menu-left">
+                <div class="top-part">
+                    <div class="top-part-left">
+                       <div class="series-type">
+                           <span id="series-span">Truyện dịch</span>
+                       </div>
+                       <div class="top-part-img">
+                           <img src="Image/tr1.jpg" alt="" class="top-part-img-con" />
+                       </div>
+                    </div>
+                    <div class="top-part-right">
+                        <input onclick="change()" type="button" value="Theo dõi" id="myButton1" class="Theodoi"></input>
+                        <span id="series-name">One Punch Man</span>
+                        <div class="series-gernes">
+                            <a href="#" class="series-gernes-item">Action</a>
+                            <a href="#" class="series-gernes-item">Comendy</a>
+                        </div>
+                        <span class="info-name">Tác giả:</span>
+                        <a href="#" class="info-link">Murata Yuusuke</a><br />
+                        <span class="info-name">Họa sĩ:</span>
+                        <a href="#" class="info-link">Murata Yuusuke</a><br />
+                        <span class="info-name">Tình trạng:</span>
+                        <a href="#" class="info-link">Đang tiến hành</a><br />
+                        <div class="top-part-icon">
+                             <div class="top-part-icon-item">
+                                <i class='bx bx-heart' id="icon1" ></i><br />
+                                <span class="icon-title">10646</span>
+                             </div>
+                             <div class="top-part-icon-item">
+                                <i class='bx bx-star' id="icon2" ></i>
+                                <span class="icon-title">Đánh giá</span>
+                             </div>
+                             <div class="top-part-icon-item">
+                                <i class='bx bx-menu'id="icon"  ></i>
+                                <span class="icon-title">Mục lục</span>
+                             </div>
+                             <div class="top-part-icon-item">
+                                <i class='bx bx-message-square-dots' id="icon"  ></i>
+                                <span class="icon-title">Bàn luận</span>
+                             </div>
+                             <div class="top-part-icon-item">
+                                <i class='bx bxs-share-alt' id="icon"></i>
+                                <span class="icon-title">Chia sẻ</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-static">
+                    <div class="row-static-item">
+                        <br><span class="row-static-title1">Lần cuối</span><br />
+                        <span class="row-static-title2">2 giờ</span>
+                    </div>
+                    <div class="row-static-item">
+                        <br><span class="row-static-title1">Số từ</span><br />
+                        <span class="row-static-title2">10.332</span>
+                    </div>
+                    <div class="row-static-item">
+                        <br><span class="row-static-title1">Đánh giá </span><br />
+                        <span class="row-static-title2">432</span>
+                    </div>
+                    <div class="row-static-item">
+                        <br><span class="row-static-title1">Lượt xem</span><br />
+                        <span class="row-static-title2">30.234</span>
+                    </div>
+                </div>
+                <div class="name-same">
+                    <span id="name-jp">Tên khác:</span>
+                    <span>ワン パン マン Hepburn: Wanpanman</span>
+                </div>
+                <div class="tomtat">
+                    <span>Tóm tắt:</span>
+                    <p>Onepunch-man là câu chuyện của 1 chàng thanh niên 23 tuổi, đang là một nhân viên văn phòng điển trai nghiêm túc và tất nhiên là ế. Không<span id="dots">...</span><span id="more">hiểu vì biến cố gì mà tự nhiên lông tóc trên người của anh trụi lủi, sau đó anh mang trong mình khả năng siêu đặc biệt "Đấm phát chết luôn" nhằm bảo vệ trái đất và thành phố nơi anh sinh sống khỏi các sinh vật ngoài không gian (nhưng phá hoại cũng không kém).</span></p>
+                    <button onclick="myFunction()" id="myBtn">Đọc thêm</button>
+                </div>
+                <div class="volume">
+                    <span class="volume-title">Volume 1</span>
+                </div>
+                <div class="chapter">
+                    <a href="chap1.html" class="chapter-link1">Chapter: 1.1  </a>
+                    <a href="#" class="chapter-link2">Chapter: 1.2 </a>
+                    <a href="#" class="chapter-link1">Chapter: 1.3 </a>
+                    <a href="#" class="chapter-link2">Chapter: 1.4 </a>
+                    <a href="#" class="chapter-link1">Chapter: 2.1 </a>
+                    <a href="#" class="chapter-link2">Chapter: 2.2 </a>
+                    <a href="#" class="chapter-link1" style="background-color:#f8f8f8;">Chapter: 2.3</a>
+                    <div class="xemthem">
+                        <a href="#" >Xem them (62 chap)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-right">
+                <div class="translate">
+                    <div class="translate-img">
+                        <img src="Image/nd1.jpg" alt="" style="width:auto; height:60px; border-radius: 4px 0 0 0 ;" />
+                        <div class="translate-img-right">
+                            <span class="translate-img-right-title" style="color:white; font-size: 20px;">Scorpius</span>
+                        </div>
+                        <h5 id="fan-trans">Nhóm dịch:</h5>
+                        <a href="#" class="translate-link">The Green Translation</a>  <br /><br /><br /><br />
+                        <span id="fan-trans2">Tham gia:</span>
+                        <a href="#" class="translate-link2">Naofumi</a>
+                        <a href="#" class="translate-link2">WiliamHn</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="end">
+            <span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
+            <span class="end-title1">Liên hệ:</span>
+            <a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link">FB: Hải Ngọc</a>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
