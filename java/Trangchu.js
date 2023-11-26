@@ -37,11 +37,11 @@ $(document).ready(function(){
     evt.currentTarget.className += " active";
   }
 
-  const dangnhap = document.querySelector('#dangnhap');
-  const wrapper = document.querySelector('.dangnhap-box');
+const dangnhap = document.querySelector('#dangnhap');
+const wrapper = document.querySelector('.dangnhap-box');
 
-  dangnhap.addEventListener('click',  ()=> {
-    wrapper.classList.add('active');
+dangnhap.addEventListener('click',  ()=> {
+wrapper.classList.add('active');
      
 });
 

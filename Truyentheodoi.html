@@ -4,6 +4,7 @@
 	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
 	<link rel="stylesheet" type="text/css" href="Css/Truyentheodoi.css" />
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
     <script type="javascript" src="myscript.js"></script>
     <script>  
@@ -16,13 +17,12 @@
             //$("#cart-amount").text("Giỏ hàng ("+amount+")");
             
             var table = `
-            <table cellpadding="5" cellspacing="0">
+            <table cellpadding="0" cellspacing="0">
                 
-                    <tr>
-                        <th style="font-family:Arial, Helvetica, sans-serif;"">STT</th>
-                        <th style="font-family:Arial, Helvetica, sans-serif;">Ảnh</th>
-                        <th style="font-family:Arial, Helvetica, sans-serif;"">Tên sản phẩm</th>
-                        <th style="font-family:Arial, Helvetica, sans-serif;"">Xóa</th>
+                    <tr class="content-head">
+                        <th ><span style="margin-left:20px;">Tên truyện</span> </th>
+                        <th >Mới nhất</th>
+                        <th style="width:20%;"><span >Theo dõi</span</th>
                     </tr>
                 
             `;
@@ -30,13 +30,28 @@
             for(var i=0; i<amount; i++){
                 var row = `
                 
-                    <tr >
+                    <tr class="follow-box" >
                         
-                        <td style="padding-left:10px ; font-weight:500 ; font-size:20px">${i+1}</td>
-                        <td style="width: 150px;height:80px;"><img style="width: 80px;height:80px;margin-left:30px" src="${products[i].img}" ></td>
-                        <td style="width:600px;text-align:center">${products[i].name}</td>
-                        <td>
-                            <button id="chot"style="height:30px;color:red; background-color:rgb(26, 246, 22)"><i class='bx bx-x-circle'></i>Bỏ theo dõi</button>
+                        <td >
+                          <div class="tentruyen">
+                             <img style="width: 50px;height:70px;margin-left:20px;margin-top:5px" src="${products[i].img}" >
+                             <div class="tentruyen-text-box">
+                              <a href="#" class="tentruyen-link">${products[i].name}</a><br>
+                              <span > Truyện dịch</span>
+                              
+                            </div>
+                          </div>
+                        </td>
+                        <td >
+                          <div class=chapter-box>
+                            <a href="#" class="chapter-link">${products[i].name2}</a><br>
+                              <span > ${products[i].name1}</span>
+                          </div>
+                        </td>
+                        <td >
+                          <div class="delete-btn">
+                            <button id="chot"><i class='bx bx-x-circle'></i>Bỏ theo dõi</button>
+                          </div>
                         </td>
                     </tr>
                
@@ -96,11 +111,34 @@ window.onclick = function(event) {
 		    <box-icon name='search'></box-icon>
 		</div>
 	</header><br /><br /><br /><br /><br />
+  
     <section>
-    <section>
+      <div class="img-logo2">
+        <img src="Image/nen4.jpg" alt="Logo2" width="100%" height="200" id="logo2" />
+      </div><br /><br />
+      <div class="follow">
         <div id="content">
 
         </div>
+        <div class="follow-left">
+          <div class="follow-left-header">
+            <h4 id="tren">Tài khoản</h4>
+            <span class="duoi" >Wiliamhn</span>
+          </div>
+          
+          <a href="#" class="active" ><span class="fa fa-angle-left" style="font-size: 24px;"></span > <span>Kệ sách</span> </a><br>
+          <a href="#" ><span class="fa fa-angle-left" style="font-size: 24px;"></span > <span>Bookmark</span> </a><br>
+          <a href="#" ><span class="fa fa-angle-left" style="font-size: 24px;"></span > <span>Thông báo cá nhân</span> </a><br>
+          <a href="#" ><span class="fa fa-angle-left" style="font-size: 24px;"></span > <span>Hộp thư</span> </a><br>
+          <a href="#" ><span class="fa fa-angle-left" style="font-size: 24px;"></span > <span>Tùy chỉnh</span> </a><br>
+          
+        </div>
+      </div>
+      <div class="end">
+        <span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
+        <span class="end-title1">Liên hệ:</span>
+        <a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link" style="color:#1cea12;">FB: Hải Ngọc</a>
+      </div>
     </section>
     
 </body>

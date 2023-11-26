@@ -5,79 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="Css/Truyen1.css" />
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
-    <script type="text/javascript" src="java/myscript.js"></script>
-    <script>
-        function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Đọc thêm";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Thu gọn";
-    moreText.style.display = "inline";
-  }
-}
-    </script>
-      <script>
-        $(document).ready(function(){
-            $(".Theodoi").click(function(){					
-					var pImg = $(this).parents().find(".top-part-img-con").attr("src");
-					var pName = $(this).parents().find("#series-name").text();
-					var product = {
-						"img":pImg,
-						"name":pName,
-					};
-					
-					//alert(pImg +" "+pName+" "+pPrice);
-					var cart = sessionStorage.getItem("cart");
-					var cartProducts = "";
-					if(cart!=null){
-						cartProducts = cart +"," + JSON.stringify(product);						
-					} else
-						cartProducts = JSON.stringify(product);
-					sessionStorage.setItem("cart",cartProducts);	
-									
-				});
-        });
-       </script>
-       <script>
-        
-         function change() // no ';' here
-{
-    var elem = document.getElementById("myButton1");
-    if (elem.value=="Theo dõi") {
-        elem.value = "Hủy theo dõi";
-        elem.classList.add('active');
-    }
-    else {
-        elem.value = "Theo dõi";
-        elem.classList.remove('active');
-}}
-          </script>
-       <script>
-            function myFunctions() {
-  document.getElementById("myDrop").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbutton')) {
-    var dropdowns = document.getElementsByClassName("drop-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-       </script>
+    <script type="text/javascript" src="java/Truyen1.js"></script>
 </head>
 <body>
 	<header>
@@ -116,7 +44,7 @@ window.onclick = function(event) {
                        </div>
                     </div>
                     <div class="top-part-right">
-                        <input onclick="change()" type="button" value="Theo dõi" id="myButton1" class="Theodoi"></input>
+                        <input onclick="change()" type="button" value="Theo dõi" id="myButton1" class="Theodoi" ></input>
                         <span id="series-name">One Punch Man</span>
                         <div class="series-gernes">
                             <a href="#" class="series-gernes-item">Action</a>
@@ -130,15 +58,33 @@ window.onclick = function(event) {
                         <a href="#" class="info-link">Đang tiến hành</a><br />
                         <div class="top-part-icon">
                              <div class="top-part-icon-item">
-                                <i class='bx bx-heart' id="icon1" ></i><br />
+                                <i class='bx bx-heart' id="icon1" onclick="changeIcon1(this)"></i><br />
                                 <span class="icon-title">10646</span>
                              </div>
                              <div class="top-part-icon-item">
-                                <i class='bx bx-star' id="icon2" ></i>
+                                <i class='bx bx-star' id="icon2" onclick="changeIcon2()"></i>
+                                 <div id="Danhgia-content" class="Danhgia">
+                                    <span>Đánh giá của bạn:</span>
+                                    <div class="rate">
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="text">5 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="text">4 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="text">3 stars</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="text">2 stars</label>
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="text">1 star</label>
+                                    </div>
+                                    <textarea id="w3review" name="w3review" rows="6" cols="50"></textarea>
+                                    <button type="submit" class="Danhgia-btn" onclick="Danhgiabtn()">Đăng đánh giá</button>
+
+                                 </div>
                                 <span class="icon-title">Đánh giá</span>
                              </div>
                              <div class="top-part-icon-item">
-                                <i class='bx bx-menu'id="icon"  ></i>
+                                <a href="#mucluc"><i class='bx bx-menu' id="icon"  ></i></a>
                                 <span class="icon-title">Mục lục</span>
                              </div>
                              <div class="top-part-icon-item">
@@ -179,21 +125,48 @@ window.onclick = function(event) {
                     <p>Onepunch-man là câu chuyện của 1 chàng thanh niên 23 tuổi, đang là một nhân viên văn phòng điển trai nghiêm túc và tất nhiên là ế. Không<span id="dots">...</span><span id="more">hiểu vì biến cố gì mà tự nhiên lông tóc trên người của anh trụi lủi, sau đó anh mang trong mình khả năng siêu đặc biệt "Đấm phát chết luôn" nhằm bảo vệ trái đất và thành phố nơi anh sinh sống khỏi các sinh vật ngoài không gian (nhưng phá hoại cũng không kém).</span></p>
                     <button onclick="myFunction()" id="myBtn">Đọc thêm</button>
                 </div>
-                <div class="volume">
+                
+                <div class="volume" id="mucluc">
                     <span class="volume-title">Volume 1</span>
                 </div>
-                <div class="chapter">
-                    <a href="chap1.html" class="chapter-link1">Chapter: 1.1  </a>
-                    <a href="#" class="chapter-link2">Chapter: 1.2 </a>
-                    <a href="#" class="chapter-link1">Chapter: 1.3 </a>
-                    <a href="#" class="chapter-link2">Chapter: 1.4 </a>
-                    <a href="#" class="chapter-link1">Chapter: 2.1 </a>
-                    <a href="#" class="chapter-link2">Chapter: 2.2 </a>
-                    <a href="#" class="chapter-link1" style="background-color:#f8f8f8;">Chapter: 2.3</a>
-                    <div class="xemthem">
-                        <a href="#" >Xem them (62 chap)</a>
-                    </div>
+                <div class="chapter" >
+                    <div class="chapter-con" id="chapter-phan1">
+                    <a href="chap1.html" class="chapter-link1" id="tentruyen">Chương 1.1: Khởi đầu của một hành trình dài </a>
+                    <a href="#" class="chapter-link2">Chương 1.2: Nước mắt và kỉ niệm</a>
+                    <a href="#" class="chapter-link1">Chương 1.3: Trang tại táo </a>
+                    <a href="#" class="chapter-link2">Chương 1.4: Nhà thơ Dinare</a>
+                    <a href="#" class="chapter-link1">Chương 1.5: Cuộc tấn công bất ngờ</a>
+                    <a href="#" class="chapter-link2">Chương 2.1: Tìm kiếm Vương quốc của tộc người lùn</a>
+                    <a href="#" class="chapter-link1">Chương 2.2: Đàm phán </a> 
+                    <a href="#" class="chapter-link2">Chương 2.3: Chuẩn bị cho 1 chuyến đi đến 1 vùng đất xa</a>
+                    <a href="#" class="chapter-link1">Chương 2.4: Nguy cơ đến gần </a> 
+                    <a href="#" class="chapter-link2">Chương 2.5: Chúa tể rồng sương giá </a>
+                    <a href="#" class="chapter-link1">Chương 3.1: Tìm kiếm sự cứu rỗi  </a> 
+                    
+                  </div>
+                  <button onclick="openall()" class="xemthem" id="phan1">Xem Thêm</button> 
                 </div>
+                <div class="volume">
+                    <span class="volume-title" id="volume-title-main">Volume 2</span>
+                </div>
+                <div class="chapter" >
+                    <div class="chapter-con" id="chapter-phan2">
+                    <a href="chap1.html" class="chapter-link1" >Chương 1.1: Khởi đầu của một hành trình dài </a>
+                    <a href="#" class="chapter-link2">Chương 1.2: Nước mắt và kỉ niệm</a>
+                    <a href="#" class="chapter-link1">Chương 1.3: Trang tại táo </a>
+                    <a href="#" class="chapter-link2">Chương 1.4: Nhà thơ Dinare</a>
+                    <a href="#" class="chapter-link1">Chương 1.5: Cuộc tấn công bất ngờ</a>
+                    <a href="#" class="chapter-link2">Chương 2.1: Tìm kiếm Vương quốc của tộc người lùn</a>
+                    <a href="#" class="chapter-link1">Chương 2.2: Đàm phán </a> 
+                    <a href="#" class="chapter-link2">Chương 2.3: Chuẩn bị cho 1 chuyến đi đến 1 vùng đất xa</a>
+                    <a href="#" class="chapter-link1">Chương 2.4: Nguy cơ đến gần </a> 
+                    <a href="#" class="chapter-link2">Chương 2.5: Chúa tể rồng sương giá </a>
+                    <a href="#" class="chapter-link1">Chương 3.1: Tìm kiếm sự cứu rỗi  </a> 
+                    
+                  </div>
+                  <button onclick="openall1()" class="xemthem"  id="phan2">Xem Thêm</button> 
+                </div>
+            
             </div>
             <div class="menu-right">
                 <div class="translate">
@@ -212,6 +185,7 @@ window.onclick = function(event) {
 
             </div>
         </div>
+        
         <div class="end">
             <span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
             <span class="end-title1">Liên hệ:</span>
