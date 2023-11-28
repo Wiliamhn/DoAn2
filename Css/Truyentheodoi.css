@@ -288,6 +288,7 @@ section{
 	font-size: 17px;
 	margin-top: 10px;
 	display: inline-flex;
+	white-space: nowrap;
 }
 .chapter-link:hover{
 	color: #10b18e;
@@ -304,6 +305,7 @@ section{
 .chapter-box{
 	height:80px;
 	width: 366px;
+	white-space: nowrap;
 }
 .chapter-box span{
 	

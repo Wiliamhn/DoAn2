@@ -88,7 +88,7 @@ function myFunctions() {
   function openall1() {// no ';' here
     var xemthem = document.querySelector('#phan2');
     var Chapper = document.querySelector('#chapter-phan2');
-  
+    
     xemthem.style.display="none";
     Chapper.classList.add('active');
   }
