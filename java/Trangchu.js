@@ -18,6 +18,7 @@ $(document).ready(function(){
 
   function openCity(evt, cityName) {
     // Declare all variables
+    document.getElementById("defaultOpen").click();
     var i, tabcontent, tablinks,tabcontent_fist; 
   
     // Get all elements with class="tabcontent" and hide them
@@ -35,6 +36,7 @@ $(document).ready(function(){
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+    
   }
 
 const dangnhap = document.querySelector('#dangnhap');
@@ -62,3 +64,5 @@ window.onclick = function(event) {
     }
   }
 }
+
+

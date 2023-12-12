@@ -6,6 +6,7 @@
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
 </head>
 <body>
 	<header>
@@ -28,6 +29,35 @@
 				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
 			  </div>
 			</div>
+			<a class="Cartbutom"  href="#"><i style="color: rgb(0, 0, 0);" class="fa fa-cart-plus"></i>&nbsp;<span  class="OnCart"></span>  </a>
+			<div class="Cart">
+                <div class="Cart-content">
+                        <div class="Cart-header">
+                            <a>Giỏ hàng</a>
+                            <a id="Soluong"></a>
+                            <span id="HideCart"> &times;</span>
+                            
+                        </div>
+                        <div class="Cart-body">
+                            <div class="Cart-row">
+                                <span class="cart-item  cart-column">Sản Phẩm</span>
+                                <span class="cart-price  cart-column">Giá</span>
+                                <span class="cart-quantity  cart-column">Số Lượng</span>
+                            </div>
+                            <div class="over-cart overY">
+                            </div>
+                           
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                <span class="cart-total-price"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="UpdateCart()" type="button" class="close-footer" style="display: none;">Cập nhập giỏ hàng</button>
+                            <a href="Paying.html"><button type="button" class="order" >Thanh Toán</button></a>
+                        </div>
+                </div>
+            </div>
 		    <box-icon name='search'></box-icon>
 		</div>
 	</header>
@@ -163,8 +193,8 @@
 		</div>
 		<div class="tieude1">
 			<div class="header-title">
-				<span class="sts-both">Chương</span>
-				<span class="sts-emty">mới cập nhật</span>
+				<span class="sts-both">Truyện</span>
+				<span class="sts-emty">mua</span>
 			</div>
 		</div>
 		<div class="menu">
@@ -174,7 +204,11 @@
 						<img src="Image/tr12.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Tôi chờ em bằng cả mùa xuân của ngày hôm qua</a>
+						<a href="#" class="menu-title">Tôi chờ em bằng cả mùa xuân của ngày hôm qua</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+						<a onclick="addCart({id:'01',image:'Image/tr12.jpg',price:'20000',name:'Tôi chờ em bằng cả mùa xuân của ngày hôm qua'})" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+					    </div>
 					</div>
 				</div>
 				<div class="menu-content1">
@@ -182,15 +216,23 @@
 						<img src="Image/tr13.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Ankoku kishi monogatari~Yuusha</a>
-					</div>
+						<a href="#" class="menu-title">Ankoku kishi monogatari~Yuusha</a><br/>
+						<span>24.000đ</span>
+						<div class="buttonaddcard">
+						<a onclick="addCart({id:'02',image:'Image/tr13.jpg',price:'24000',name:'Ankoku kishi monogatari~Yuusha'})" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
+					</div>		
 				</div>
 				<div class="menu-content1">
 					<div class="menu-box">
 						<img src="Image/tr14.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Re:Zero kara Hajimeru Isekai Seikatsu</a>
+						<a href="#" class="menu-title">Re:Zero kara Hajimeru Isekai Seikatsu</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart({id:'03',image:'Image/tr14.jpg',price:'20000',name:'Re:Zero kara Hajimeru Isekai Seikatsu'})" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content1">
@@ -198,7 +240,11 @@
 						<img src="Image/tr16.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Kimi to Boku no Saigo no Senjo, Arui wa Sekai ga</a>
+						<a href="#" class="menu-title">Kimi to Boku no Saigo no Senjo, Arui wa Sekai ga</a><br/>
+						<span>25.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart({id:'04',image:'Image/tr16.jpg',price:'25000',name:'Kimi to Boku no Saigo no Senjo, Arui wa Sekai ga'})" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content1">
@@ -206,7 +252,11 @@
 						<img src="Image/tr15.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Aria-san bàn bên thi thoảng lại thả thính tôi</a>
+						<a href="#" class="menu-title">Aria-san bàn bên thi thoảng lại thả thính tôi</a><br/>
+						<span>22.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart({id:'05',image:'Image/tr15.jpg',price:'22000',name:'Aria-san bàn bên thi thoảng lại thả thính tôi'})" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content3">
@@ -214,7 +264,11 @@
 						<img src="Image/tr17.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Cô Em Gái Thằng Bạn Thân </a>
+						<a href="#" class="menu-title">Cô Em Gái Thằng Bạn Thân </a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -222,7 +276,11 @@
 						<img src="Image/tr18.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">How to Keep a Distance from a Beautiful Girl</a>
+						<a href="#" class="menu-title">How to Keep a Distance from a Beautiful Girl</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -230,7 +288,11 @@
 						<img src="Image/tr19.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title" style="line-height:50px;">Liar Liar</a>
+						<a href="#" class="menu-title" style="line-height:50px;">Liar Liar</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -238,7 +300,11 @@
 						<img src="Image/tr20.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title"style="line-height:50px;">Tearmoon Empire</a>
+						<a href="#" class="menu-title"style="line-height:50px;">Tearmoon Empire</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -246,7 +312,11 @@
 						<img src="Image/tr21.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title"style="line-height:50px;">Tiếng Vọng Thiên Đường</a>
+						<a href="#" class="menu-title"style="line-height:50px;">Tiếng Vọng Thiên Đường</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content3">
@@ -254,7 +324,11 @@
 						<img src="Image/tr22.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Over Limit Skill Holder: Only the Reincarnated</a>
+						<a href="#" class="menu-title">Over Limit Skill Holder: Only the Reincarnated</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -262,7 +336,11 @@
 						<img src="Image/tr23.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title"style="line-height:50px;">Magical Girl Tyrant Sylph</a>
+						<a href="#" class="menu-title"style="line-height:50px;">Magical Girl Tyrant Sylph</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -270,7 +348,11 @@
 						<img src="Image/tr24.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Cho tới khi cô bạn từng nói "Hãy mãi là bạn nhé?"</a>
+						<a href="#" class="menu-title">Cho tới khi cô bạn từng nói "Hãy mãi là bạn nhé?"</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -278,7 +360,11 @@
 						<img src="Image/tr25.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Chẳng biết vì sao Nữ thần học đường lại thích ...</a>
+						<a href="#" class="menu-title">Chẳng biết vì sao Nữ thần học đường lại thích ...</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -286,7 +372,11 @@
 						<img src="Image/tr26.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Tensei Oujo To Tensai Reijou No Mahou ...</a>
+						<a href="#" class="menu-title">Tensei Oujo To Tensai Reijou No Mahou ...</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content3">
@@ -294,7 +384,11 @@
 						<img src="Image/tr27.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">The Demon Prince goes to the Academy</a>
+						<a href="#" class="menu-title">The Demon Prince goes to the Academy</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -302,7 +396,11 @@
 						<img src="Image/tr28.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title"style="line-height:50px;">Imouto sae Ireba Ii</a>
+						<a href="#" class="menu-title"style="line-height:50px;">Imouto sae Ireba Ii</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -310,7 +408,11 @@
 						<img src="Image/tr29.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">The Darkness Was Comfortable for Me</a>
+						<a href="#" class="menu-title">The Darkness Was Comfortable for Me</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -318,7 +420,11 @@
 						<img src="Image/tr30.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Ori of the Dragon Chain - "Heart" in the mind</a>
+						<a href="#" class="menu-title">Ori of the Dragon Chain - "Heart" in the mind</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -326,7 +432,11 @@
 						<img src="Image/tr31.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Tiểu Thuyết Kamen Rider Decade</a>
+						<a href="#" class="menu-title">Tiểu Thuyết Kamen Rider Decade</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content3">
@@ -334,7 +444,11 @@
 						<img src="Image/tr32.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">GioGio's Bizarre Adventure II: Golden </a>
+						<a href="#" class="menu-title">GioGio's Bizarre Adventure II: Golden </a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -342,7 +456,11 @@
 						<img src="Image/tr33.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Dối trá, lừa lọc và trường học dị năng</a>
+						<a href="#" class="menu-title">Dối trá, lừa lọc và trường học dị năng</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -350,7 +468,11 @@
 						<img src="Image/tr34.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a>
+						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -358,7 +480,11 @@
 						<img src="Image/tr35.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a>
+						<a href="#" class="menu-title">Rokujouma no Shinryakusha!?</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -366,7 +492,11 @@
 						<img src="Image/tr36.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Boushoku no Berserk ~ Ore dake Level </a>
+						<a href="#" class="menu-title">Boushoku no Berserk ~ Ore dake Level </a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content3">
@@ -374,7 +504,11 @@
 						<img src="Image/tr45.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Thú cưng của tôi là ma kiếm </a>
+						<a href="#" class="menu-title">Thú cưng của tôi là ma kiếm </a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -382,7 +516,11 @@
 						<img src="Image/tr46.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">The Most Notorious "Tanker" Runs</a>
+						<a href="#" class="menu-title">The Most Notorious "Tanker" Runs</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -390,7 +528,11 @@
 						<img src="Image/tr47.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Oni Goroshi- Sát quỷ vương</a>
+						<a href="#" class="menu-title">Oni Goroshi- Sát quỷ vương</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -398,7 +540,11 @@
 						<img src="Image/tr48.jpg" alt="" class="menu-img" />
 					</div>
                     <div class="menu-div">
-						<a href="#" class="menu-title">Zanmu-Labyrinth</a>
+						<a href="#" class="menu-title">Zanmu-Labyrinth</a><br/>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
 				<div class="menu-content2">
@@ -407,173 +553,13 @@
 					</div>
                     <div class="menu-div">
 						<a href="#" class="menu-title">jinrui Shokui </a>
+						<span>20.000đ</span>
+						<div class="buttonaddcard">
+							<a onclick="addCart()" class="Gio" ><i class="fa fa-cart-plus"></i></a><br> 
+						</div>
 					</div>
 				</div>
-				<div class="menu-content3">
-					<div class="menu-box">
-						<img src="Image/tr50.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Grimace-Cười hoặc chết </a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr51.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Apocalypse Zero</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr52.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Khu chợ lúc chạng vạng</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr53.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Tái sinh</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr54.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Quái vật không tên </a>
-					</div>
-				</div>
-				<div class="menu-content3">
-					<div class="menu-box">
-						<img src="Image/tr55.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Yumenashi- sensei </a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr56.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Crows Zero Reboot</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr57.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Blue Box</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr58.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Futari Sưitch</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr59.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Trước khi mùa xuân tới</a>
-					</div>
-				</div>
-				<div class="menu-content3">
-					<div class="menu-box">
-						<img src="Image/tr60.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Người vạn năng </a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr61.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Shibuya Kingyo</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr62.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Đôi bóng chày Tokyo siêu đẳng</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr63.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Naraku no Futari</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr64.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Special Martial Arts Extreme Hell </a>
-					</div>
-				</div>
-
-
-				<div class="menu-content3">
-					<div class="menu-box">
-						<img src="Image/tr65.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Nodame Cantabile </a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr66.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Houkago no Sanome</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr67.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Gantz Edo</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr68.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Kẻ phán sử</a>
-					</div>
-				</div>
-				<div class="menu-content2">
-					<div class="menu-box">
-						<img src="Image/tr69.jpg" alt="" class="menu-img" />
-					</div>
-                    <div class="menu-div">
-						<a href="#" class="menu-title">Thí nghiệm ngục tù </a>
-					</div>
-				</div>
-		        <button class="xemthem"><a class="fa fa-hand-o-right"><span>Xem thêm</span></a></button>
-			
-
+				<button class="xemthem"><a class="fa fa-hand-o-right"><span>Xem thêm</span></a></button>
 			</div>
 			<div class="menu-right">
 				<div class="history">
@@ -607,7 +593,7 @@
 				<div class="top">
 					<span class="tieude2">Top truyện</span>
 					<div class="tab">
-						<button class="tablinks" onclick="openCity(event, 'London')">Top Ngày</button>
+						<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Top ngày</button>
 						<button class="tablinks" onclick="openCity(event, 'Paris')">Top Tuần</button>
 						<button class="tablinks" onclick="openCity(event, 'Tokyo')">Top Tháng</button>
 					  </div>
@@ -921,13 +907,183 @@
 							</div>
 							<hr>
 					      </div>
-						  
 						</div>
 					</div>
 				</div>
+		</div>
+		<div class="tieude1">
+			<div class="header-title">
+				<span class="sts-both">Truyện</span>
+				<span class="sts-emty">miễn phí</span>
 			</div>
+		</div>
+		<div class="truyen-free">
+			<div class="truyen-free-left">
+                <div class="menu-content3">
+					<div class="menu-box">
+						<img src="Image/tr50.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Grimace-Cười hoặc chết </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr51.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Apocalypse Zero</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr52.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Khu chợ lúc chạng vạng</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr53.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Tái sinh</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr54.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Quái vật không tên </a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="Image/tr55.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Yumenashi- sensei </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr56.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Crows Zero Reboot</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr57.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Blue Box</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr58.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Futari Sưitch</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr59.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Trước khi mùa xuân tới</a>
+					</div>
+				</div>
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="Image/tr60.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Người vạn năng </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr61.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Shibuya Kingyo</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr62.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Đôi bóng chày Tokyo siêu đẳng</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr63.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Naraku no Futari</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr64.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Special Martial Arts Extreme Hell </a>
+					</div>
+				</div>
 
-	
+
+				<div class="menu-content3">
+					<div class="menu-box">
+						<img src="Image/tr65.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Nodame Cantabile </a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr66.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Houkago no Sanome</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr67.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Gantz Edo</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr68.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Kẻ phán sử</a>
+					</div>
+				</div>
+				<div class="menu-content2">
+					<div class="menu-box">
+						<img src="Image/tr69.jpg" alt="" class="menu-img" />
+					</div>
+                    <div class="menu-div active">
+						<a href="#" class="menu-title">Thí nghiệm ngục tù </a>
+					</div>
+				</div>
+		        <button class="xemthem"><a class="fa fa-hand-o-right"><span>Xem thêm</span></a></button>
+			</div>
+		</div>
 	<div id="backtop">
 		<i class='bx bx-chevron-up' id="backtop-icon"></i>
 	</div>
@@ -1071,8 +1227,13 @@
 		<a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link">FB: Hải Ngọc</a>
 	</div>
 </body>
+<script>
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="java/Trangchu.js"></script>
+<script type="text/javascript" src="java/Giohang.js"></script>
 </html>

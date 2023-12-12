@@ -35,10 +35,11 @@ $(document).ready(function(){
             if(cart!=null){
                 cartProducts = cart +"," + JSON.stringify(product);						
             } else
-                cartProducts = JSON.stringify(product);
+            cartProducts = JSON.stringify(product);
             sessionStorage.setItem("cart",cartProducts);	
-                            
+                        
         });
+         
 });
 
 //Thay đổi nút theo dõi
@@ -55,6 +56,7 @@ function change() // no ';' here
     else {
         elem.value = "Theo dõi";
         elem.classList.remove('active');
+        sessionStorage.clear();
 }};
 
 //Mở thanh công cụ trên header

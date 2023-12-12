@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+	<title>Giỏ hàng</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="Css/Trangchu.css" />
+    <link rel="stylesheet" type="text/css" href="Css/Paying.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <header>
+		<div class="ngoc container">
+			<img src="Image/logo.jpg" href="#" alt="logo" class="logo" />
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			   <div class="drop">
+			     	<button onclick="myFunction()" class="dropbutton" src="avt.jpg"><img src="Image/avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+				
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="#">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="#">Truyện theo dõi <i class='bx bxs-book-bookmark' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+			<a class="Cartbutom"  href="#"><i style="color: rgb(0, 0, 0);" class="fa fa-cart-plus"></i>&nbsp;<span  class="OnCart"></span>  </a>
+			<div class="Cart">
+                <div class="Cart-content">
+                        <div class="Cart-header">
+                            <a>Giỏ hàng</a>
+                            <a id="Soluong"></a>
+                            <span id="HideCart"> &times;</span>
+                            
+                        </div>
+                        <div class="Cart-body">
+                            <div class="Cart-row">
+                                <span class="cart-item  cart-column">Sản Phẩm</span>
+                                <span class="cart-price  cart-column">Giá</span>
+                                <span class="cart-quantity  cart-column">Số Lượng</span>
+                            </div>
+                            <div class="over-cart overY">
+                            </div>
+                           
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                <span class="cart-total-price"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="UpdateCart()" type="button" class="close-footer" style="display: none;">Cập nhập giỏ hàng</button>
+                            <a href="Paying.html"><button type="button" class="order" >Thanh Toán</button></a>
+                        </div>
+                </div>
+            </div>
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header><br /><br /><br /><br /><br />
+    <section>
+        <div class="img-logo2">
+			<img src="Image/logo3.png" alt="Logo" width="100%" height="200" id="logo2" />
+		</div>
+        <div class="row CartCT">
+            <div class="Cart-contentF">
+                    <div class="Cart-header">
+                        <a>Giỏ hàng</a>
+                        <a id="Soluong"></a>
+                    </div>
+                    <div class="Cart-body">
+                        <div class="Cart-row">
+                            <span class="cart-item  cart-column">Sản Phẩm</span>
+                            <span class="cart-price  cart-column">Giá</span>
+                            <span class="cart-quantity  cart-column">Số Lượng</span>
+                        </div>
+                        <div class="over-cart2">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="UpdateCart()" type="button" class="close-footer" style="display: none;">Cập nhập giỏ hàng</button>
+                    </div>
+            </div>
+            <div class="cart-TC">
+                <div class="Cart-total2">
+                    <div>Tổng tiền</div>
+                    <div>
+                        <span>Tạm tính: </span>
+                        <span class="cart-total-price"></span>
+                    </div>
+                    <div>
+                        <span>Giảm giá: </span>
+                        <span class="cart-total-price2"></span>
+                    </div>
+                    <div>
+                        <span>Thành tiền (Đã bao gồm VAT 10%): </span>
+                        <span class="cart-total-price4"></span>
+                    </div>
+                  
+                    <a  onclick="Paying()"><button class="DAtHANG"  >Mua Truyện</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="truyen-tuong-tu">
+        <div class="tieude1">
+			<div class="header-title">
+				<span class="sts-both">Truyện</span>
+				<span class="sts-emty">tương tự</span>
+			</div>
+		</div>
+	    <swiper-container class="mySwiper" navigation="true">
+			<swiper-slide>
+			  <div class="tiles">
+				<a class="tile" href="Truyen1.html"><img src="Image/tr1.jpg"/>
+				<div class="details">
+					<span class="title">One punch man</span>
+					<span class="info">Chapter 213</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr2.jpg"/>
+				<div class="details">
+					<span class="title">Kimetsu No Yaiba</span>
+					<span class="info">Chapter 534</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr3.webp"/>
+				<div class="details"><span class="title">Suzume no Tojimori</span>
+				  <span class="info">Chapter 324</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr4.jpe"/>
+				<div class="details">
+				  <span class="title">OVER LORD</span>
+				  <span class="info">Chapper 623</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr5.jpg"/>
+				  <div class="details">
+					<span class="title">Tensei shitara slime datta ken</span>
+					<span class="info">Chapper 43</span>
+				  </div></a>
+				  <a class="tile" href="#"><img src="Image/tr6.webp"/>
+					<div class="details">
+					  <span class="title">Maou gakuin</span>
+					  <span class="info">Chapper 543</span>
+					</div></a>
+				
+			</div>
+			</swiper-slide>
+			<swiper-slide>
+			  <div class="tiles">
+				<a class="tile" href="#"><img src="Image/tr37.jpg"/>
+				<div class="details">
+					<span class="title">ISEKAI TORIWAKE</span>
+					<span class="info">Chapter 342</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr38.jpg"/>
+				<div class="details">
+					<span class="title">Jujutsu Kaisen</span>
+					<span class="info">Chapter 654</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr44.jpg"/>
+				<div class="details"><span class="title">Solo Leveling</span>
+				  <span class="info">Chapter 323</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr42.jpg"/>
+				<div class="details">
+				  <span class="title">Mushoku Tensei</span>
+				  <span class="info">Chapper 621</span>
+				</div></a>
+				<a class="tile" href="#"><img src="Image/tr41.jpg"/>
+				  <div class="details">
+					<span class="title">86</span>
+					<span class="info">Chapper 43</span>
+				  </div></a>
+				  <a class="tile" href="#"><img src="Image/tr43.jpg"/>
+					<div class="details">
+					  <span class="title">Dead note</span>
+					  <span class="info">Chapper 323</span>
+					</div></a>
+				
+			</div>
+			</swiper-slide>
+			<swiper-slide>Slide 3</swiper-slide>
+			<swiper-slide>Slide 4</swiper-slide>
+			<swiper-slide>Slide 5</swiper-slide>
+			<swiper-slide>Slide 6</swiper-slide>
+			<swiper-slide>Slide 7</swiper-slide>
+			<swiper-slide>Slide 8</swiper-slide>
+			<swiper-slide>Slide 9</swiper-slide>
+		  </swiper-container>
+		
+		
+    </div>
+    </section>
+    <div class="end">
+		<span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
+		<span class="end-title1">Liên hệ:</span>
+		<a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link">FB: Hải Ngọc</a>
+	</div>
+</body>
+<script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+ <script type="text/javascript" src="java/Giohang.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+   
+</html> 

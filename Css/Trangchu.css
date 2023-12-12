@@ -9,7 +9,7 @@
 	width:100%;
 }
 body{
-	background:  url('background1.jpg');
+	
 }
 header{
 	position: fixed;
@@ -58,7 +58,7 @@ header{
 	color:#D3D3D3;
 }
 .dangnhap-box{
-	width: auto;
+	width: 20%;
 	height: 30px;
 	overflow: hidden;
 }
@@ -114,6 +114,178 @@ header{
 }
 .drop-content a:hover {background-color: #ddd;}
 .show {display:block;}
+
+.Cartbutom{
+	font-size: 20px;
+	display: flex;
+	text-decoration: none;
+	margin-left: 5px;
+	padding: 2px;
+}
+
+
+.OnCart{
+	font-size: 15px;
+
+}
+.OnCart:hover{
+	color: #00CC99;
+}
+.Cart-content{
+     position: fixed;
+     top: 0px;
+     right: 0;
+     z-index: 10000;
+     width: 500px;
+     margin: auto;
+	 height: auto;
+     margin-top: 5%;
+     border: 1px solid rgb(2, 2, 2);
+	 box-shadow:1px 5px 5px 3px rgba(0,0,0,0.2);
+     background-color: white;
+     border-radius: 2px;
+     transition: all 1s;
+     transform: scale(0);
+     opacity: 0.5;
+     transform-origin: top;
+	 font-family:"OpenSans",sans-serif;
+
+ }
+
+ .Cart-header {
+	z-index: 1000;
+    line-height: 30px;
+    padding: 10px;
+     
+ }
+ .Cart-header a:first-child{
+    font-size: 25px;
+    font-weight: bold;
+}
+.Cart-header span{
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    color: gray;
+}
+.Cart-header span:hover{
+    color: red;
+}
+.Cart-row{
+    display: flex;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.cart-column{
+    font-size: 15px;
+    font-weight: bold;
+   margin: 10px 10px 10px 10px ;
+   align-items: center;
+}
+.cart-item{
+   width: 45%;
+   display: flex;
+}
+.cart-price{
+    width: 25%;
+ }
+ .cart-quantity
+ {
+     width: 18%;
+ }
+ .Cart-product{
+     display: flex;
+ }
+ .Cart-img{
+     width: 20%;
+ }
+ .Cart-infor{
+     padding-left: 5px;
+     font-size: 16px;
+     font-weight: 100;
+ }
+ .price-product{
+     font-size: 15px;
+     font-weight: 100;
+     margin-top: 4%;
+ }
+ .cart-quantity-ca{
+     margin-top: 4%;
+ }
+ .cart-quantity-input{
+     line-height: 20px;
+     border-radius: 5px;
+     border: 1px solid #56CCF2;
+     background-color: #eee;
+     color: #333;
+     padding-left: 5px;
+     ;
+ }
+.Cart-xoa{
+    width: 45%;
+     line-height: 30px;
+     border-radius: 5px;
+     border: 1px solid red;
+     background-color: rgb(226, 57, 57);
+     color: white;
+     text-align: center;
+	 cursor: pointer;
+}
+.Cart-xoa:hover{
+	background-color: red;
+}
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-total-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+   
+  }
+  
+  .cart-total-price {
+    color: #333;
+    font-size: 18px;
+  }
+  .modal-footer {
+    display: flex;
+    margin-top: 10px;
+    padding: 20px;
+    justify-content: end;
+   
+  }
+  .close-footer{
+	font-size: 18px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: rgb(255, 179, 38);
+	color: white;
+	border: 1px solid #aaaaaa;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.order{
+  font-size: 18px;
+  background-color: rgb(27, 243, 27);
+  color: white;
+  border:  none;
+  float: right;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.order:hover{
+	background-color: rgb(12, 166, 12);
+}
+
 
 
 #logo2{
@@ -379,15 +551,26 @@ swiper-slide {
 
 .menu{
 	width:1190px;
-	height:2600px;
+	height:1550px;
 	margin:0px auto;
 }
 .menu-left{
 	float:left;
 	width:880px;
-	height:2500;
+	height:auto;
 	gap:20px;
 
+}
+.truyen-free{
+	width:1190px;
+	height:1100px;
+	margin:0px auto;
+}
+.truyen-free-left{
+	float:left;
+	width:880px;
+	height:auto;
+	gap:20px;
 }
 .xemthem{
 	height: 40px;
@@ -467,18 +650,36 @@ swiper-slide {
 .menu-div{
 	position:absolute;
 	background-color: #00CC99;
-	height:50px;
+	height:auto;
 	width:100%;
-	top:180px;
+	bottom: 0;
 	background: rgba(48, 37, 37, 0.381);
 	text-align:center;
 	line-height: 50px;
+	font-family:"OpenSans",sans-serif;
+}
+.menu-div.active{
+	position:absolute;
+	background-color: #00CC99;
+	height:50px;
+	width:100%;
+	bottom: 0;
+	background: rgba(48, 37, 37, 0.381);
+	text-align:center;
+	line-height: 50px;
+	font-family:"OpenSans",sans-serif;
+}
+.menu-div span{
+	float: left;
+	margin-left: 10px;
+	color: #26dc12;
+	font-weight: 700;
 }
 .menu-box{
     background-color: black;
 	height:100%;
 	width: 100%;
-	
+	position: absolute;
 }
 .menu-img{
 	width:100%;
@@ -496,6 +697,22 @@ swiper-slide {
 .menu-title:hover{
 	color:#10b18e;
 	
+}
+.Gio{
+	color: #fea114;
+	font-size: 25px;
+	padding-top: 2px;
+	cursor: pointer; 
+}
+.Gio:hover{
+	color: #dc1512;
+}
+.buttonaddcard{
+	position: absolute;
+	bottom: 13;
+	right: 0;
+	margin-right: 10px;
+
 }
 .menu-bottom{
 	float:inline-end;
@@ -1085,3 +1302,12 @@ swiper-slide {
 	padding:0px 15px;
 	text-align:left;
 }
+.tabcontent {
+	animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
