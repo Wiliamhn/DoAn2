@@ -95,17 +95,18 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform:scale(0);
-    transition: transform .5s ease ,  height .2s ease ;
+  
 }
 .wrapper.active-popup{
     transform:  scale(1);
 }
 
 .wrapper.active{
-    height: 520px;
+    height: 590px;
+    margin-top: 70px;
 }
 .wrapper .form-box{
+    overflow: hidden;
     width: 100%;
     padding: 40px;
 }
@@ -137,6 +138,17 @@ body{
     top: -5px;
 
 }
+.input-box select{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #032921f0;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
 .input-box input{
     width: 100%;
     height: 100%;
@@ -147,6 +159,7 @@ body{
     color: #032921f0;
     font-weight: 600;
     padding: 0 35px 0 5px;
+    
 }
 .input-box .icon{
     position: absolute;
@@ -243,4 +256,16 @@ transform: translateX(-400px);
     transition: none;
     transition: transform .18s ease;
     transform: translateX(0);
+}
+.note_login{
+    color: red;
+    margin-bottom: 10px;
+    height: 40px;
+    line-height: 30px;
+}
+.note_register{
+    height: 30px;
+    color: rgb(238, 84, 78);
+    font-size: 14px;
+    font-weight: bold;
 }

@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+	<title>Light Novel</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="Css/Trangchu.css" />
+    <link rel="stylesheet" type="text/css" href="Css/Thanhtoan.css" />
+    <link rel="stylesheet" type="text/css" href="Css/Paying.css" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+</head>
+<style>
+    swiper-container {
+    height: 300px;
+     width: 1500px;
+     
+}   
+.truyen-tuong-tu{
+    margin-top: 100px;
+}
+</style>
+<body>
+	<header>
+		<div class="ngoc container">
+            <a href="Trangchu.html" > <img src="Image/logo.jpg" alt="logo" class="logo" /></a>
+			<input type="search" class="gsearch" name="gsearch" placeholder="Tối thiểu 2 kí tự"></input>
+			<button class="bntsearch">
+				<i class='bx bx-search'></i>
+			</button>
+			<div class="dangnhap-box">
+			   <div class="drop">
+			     	<button onclick="myFunction()" class="dropbutton" src="avt.jpg"><img src="Image/avt.jpg" alt="" class="dangnhap-img"  /> Tài khoản </button>
+			   </div>
+			   <div id="myDrop" class="drop-content">
+				<a href="UserSetting.html">Trang cá nhân  <i class='bx bxs-user-circle' id="linkavt-icon" ></i></a>
+				<a href="#">Truyện theo dõi <i class='bx bxs-book-bookmark' id="linkavt-icon" ></i></a>
+				<a href="#">Đăng xuất <i class='bx bx-log-out' id="linkavt-icon"></i></a>
+			  </div>
+			</div>
+			
+		    <box-icon name='search'></box-icon>
+		</div>
+	</header>
+    <section>
+		<br /><br /><br /><br /><br />
+		<div class="img-logo2">
+			<img src="Image/logo5.png" alt="Logo2" class="Logo2" />
+		</div><br /><br />
+        <div class="row CartCT">
+            <from class="Thongtin-box" >
+                <div class=" Paying">
+                    <div class="payhead">
+                        THÔNG TIN TÀI KHOẢN
+                    </div>
+                    <div class="infomationpay">
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_hdem">Họ tên <span id="s_hdem" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_hdem" placeholder="Nhập họ và tên">
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_sdt">Điện thoại <span id="s_sdt" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_sdt" placeholder="Số điện thoại của bạn">
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_email">Email <span id="s_email" style="color: red;">*</span>: </label>
+                            <input type="text" id="txt_email" placeholder="Email của bạn (nếu có)">
+                        </div>
+                        <div class="col-12 col-s-12 col-m-12 pay1">
+                            <label for="txt_tt">Thông tin : </label>
+                            <textarea id="thongtin" placeholder=""></textarea>
+                            
+                        </div>
+                        <div style="margin-bottom: 10px" class="col-12 col-s-12 col-m-12 pay1">
+                            <button onclick="DatHang()" class="send">
+                                Thanh toán
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </from>
+            <div class="col-6 col-s-12 col-m-12 Infoder">
+                <div class="Infoder11-title"><span>THÔNG TIN ĐƠN HÀNG</span></div>
+                <div class="Infoder11">
+                </div>
+               <div class="Totalpay">
+                    <div>Tổng tiền</div>
+                    <div>
+                        <span>Tạm tính: </span>
+                        <span class="cart-total-price"></span>
+                    </div>
+                    <div>
+                        <span>Giảm giá: </span>
+                        <span class="cart-total-price2"></span>
+                    </div>
+                    <div>
+                        <span>Thành tiền:(Đã bao gồm VAT 10%): </span>
+                        <span class="cart-total-price4"></span>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="truyen-tuong-tu">
+            <div class="tieude1">
+                <div class="header-title">
+                    <span class="sts-both">Truyện</span>
+                    <span class="sts-emty">tương tự</span>
+                </div>
+            </div>
+            <swiper-container class="mySwiper" navigation="true">
+                <swiper-slide>
+                  <div class="tiless">
+                    <a class="tilee" href="Truyen1.html"><img src="Image/tr1.jpg"/>
+                    <div class="details">
+                        <span class="title">One punch man</span>
+                        <span class="info">Chapter 213</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr2.jpg"/>
+                    <div class="details">
+                        <span class="title">Kimetsu No Yaiba</span>
+                        <span class="info">Chapter 534</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr3.webp"/>
+                    <div class="details"><span class="title">Suzume no Tojimori</span>
+                      <span class="info">Chapter 324</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr4.jpe"/>
+                    <div class="details">
+                      <span class="title">OVER LORD</span>
+                      <span class="info">Chapper 623</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr5.jpg"/>
+                      <div class="details">
+                        <span class="title">Tensei shitara slime datta ken</span>
+                        <span class="info">Chapper 43</span>
+                      </div></a>
+                      <a class="tilee" href="#"><img src="Image/tr6.webp"/>
+                        <div class="details">
+                          <span class="title">Maou gakuin</span>
+                          <span class="info">Chapper 543</span>
+                        </div></a>
+                        <a class="tilee" href="#"><img src="Image/tr37.jpg"/>
+                            <div class="details">
+                                <span class="title">ISEKAI TORIWAKE</span>
+                                <span class="info">Chapter 342</span>
+                            </div></a>
+                            <a class="tilee" href="#"><img src="Image/tr38.jpg"/>
+                            <div class="details">
+                                <span class="title">Jujutsu Kaisen</span>
+                                <span class="info">Chapter 654</span>
+                            </div></a>
+                        
+                    
+                </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="tiless">
+                    <a class="tilee" href="#"><img src="Image/tr44.jpg"/>
+                    <div class="details"><span class="title">Solo Leveling</span>
+                      <span class="info">Chapter 323</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr42.jpg"/>
+                    <div class="details">
+                      <span class="title">Mushoku Tensei</span>
+                      <span class="info">Chapper 621</span>
+                    </div></a>
+                    <a class="tilee" href="#"><img src="Image/tr41.jpg"/>
+                      <div class="details">
+                        <span class="title">86</span>
+                        <span class="info">Chapper 43</span>
+                      </div></a>
+                      <a class="tilee" href="#"><img src="Image/tr43.jpg"/>
+                        <div class="details">
+                          <span class="title">Dead note</span>
+                          <span class="info">Chapper 323</span>
+                        </div></a>
+                    
+                </div>
+                </swiper-slide>
+              </swiper-container>
+            
+            
+        </div>
+    </section>
+    <div class="end">
+		<span class="end-title">© 2016 - 2023 Cổng Light Novel - Đọc Light Novel</span>
+		<span class="end-title1">Liên hệ:</span>
+		<a href="https://www.facebook.com/ngoc.wiliam.2003/" target="_blank" class="end-link">FB: Hải Ngọc</a>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="java/Trangchu.js"></script>
+<script type="text/javascript" src="java/Giohang.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</html>

@@ -8,9 +8,7 @@
 	margin:auto;
 	width:100%;
 }
-body{
-	
-}
+
 header{
 	position: fixed;
 	top: 0;
@@ -293,6 +291,9 @@ header{
 }
 .img-logo2{
 	height:200px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
 }
 .swiper{
 	z-index: 777;
@@ -1041,6 +1042,7 @@ swiper-slide {
 	width: 100%;
 	height: auto;
 	margin-top: 5px;
+	border-bottom: 0.2 solid #000000;
 }
 .comment-box-title{
 	height: 30px;
@@ -1072,7 +1074,7 @@ swiper-slide {
 	height: auto;
 }
 .comment-box-content-left{
-	width: 60px;
+	width: 20%;
 	float: left;
 	height: auto;
 }
@@ -1084,7 +1086,7 @@ swiper-slide {
 }
 .comment-box-content-right{
 	float:left;
-	width: 224px;
+	width: 80%;
 	height: auto;
 }
 .comment-box-content-right span{

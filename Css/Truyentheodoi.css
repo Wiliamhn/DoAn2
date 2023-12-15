@@ -200,6 +200,7 @@ section{
 	float:right;
 	border: 0.2px solid #D3D3D3;
 	border-radius: 4px;
+	overflow: hidden;
 }
 .follow-left-header{
 	width: 100%;
@@ -236,12 +237,12 @@ section{
 	text-decoration: none;
 	display: inline-block;
 	border-top: 0.2px solid #D3D3D3 ;
-	width: 245px;
+	width: 100%;
   }
 .follow-left a.active{
   color:#218efa;
   border-left: 2px solid #218efa;
-  width: 241px;
+  width: 100%;
 }
 .follow-left a:hover{
 	background-color: rgb(227, 237, 255);

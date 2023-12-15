@@ -12,62 +12,55 @@
             <button class="btnLogin-Popup">Đăng nhập</button>
         </nav>
     </header>
-    <div class="wrapper">
-        <span class="x"><ion-icon name="close" ></ion-icon></span>
-        <div class="form-box login">
-            <h2>Đăng nhập</h2>
-            <form action="#">
+    <div class="wrapper active">
+        <div class="form-box register">
+            <h2>Đăng ký</h2>
+            <form id="targetdk"  action="Dangnhap.html">
+                <div class="input-box" style="display: none;" >
+               <label for="txt_chucvu"></label>
+                <select  id="txt_chucvudk">
+                    <option value="Khách hàng">Khách hàng</option>
+                </select>
+                </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input class="a1" type="text" id="namedk" name="name" required>
+                    <label>Họ và Tên</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input class="a1" type="text" id="phonedk" name="phone" required>
+                    <label>Số điện thoại</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></ion-icon></span>
+                    <input class="a1" type="text" id="emaildk" name="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Mật khẩu</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Nhớ tài khoản </label>
-                    <a href="#">Quên mật khẩu</a>
-                </div>
-                <button type="submit " class="btn">Đăng nhập</button>
-                <div class="login-register">
-                    <p>Chưa có tài khoản?<a href="#" class="register-link">Đăng ký</a></p>
-                </div>
-            </form>
-        </div>
-        <div class="form-box register">
-            <h2>Đăng ký</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
+                    <span class="icon"><ion-icon name="bookmark"></ion-icon></span>
+                    <input class="a1" type="text" id="usernamedk" name="username" required>
                     <label>Tên tài khoản</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input class="a2" type="password" id="pwddk" name="pwd" required>
                     <label>Mật khẩu</label>
                 </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Đồng ý với mọi điều khoản</label>
-                    
+                <div class="note_register">
                 </div>
-                <button type="submit " class="btn">Tạo tài khoản</button>
+                <button type="submit " class="btn" onclick="ADDPeople()" id="submitdk">Tạo tài khoản</button>
                 <div class="login-register">
-                    <p>Đã có tài khoản?<a href="#" class="login-link">Đăng nhập</a></p>
+                    <p>Đã có tài khoản?<a href="Dangnhap.html" class="login-link">Đăng nhập</a></p>
                 </div>
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="java/DangKy.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="java/DangKy.js"></script>
+<script type="text/javascript" src="java/Login.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

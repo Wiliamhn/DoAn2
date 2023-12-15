@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" type="text/css" href="Css/DangKy.css">
+</head>
+<body>
+    <header>
+        <img src="Image/logo.jpg" alt="Logo" class="logo">
+        <nav class="navigation">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <button class="btnLogin-Popup">Đăng nhập</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box login" >
+            <h2>Đăng nhập</h2>
+            <form id="target" action="Admin.html">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text"  id="username" required>
+                    <label>Tên tài khoản</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="pwd" required>
+                    <label>Mật khẩu</label>
+                </div>
+                <div  class="note_login">
+                    
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Nhớ tài khoản </label>
+                    <a href="#">Quên mật khẩu</a>
+                </div>
+                <button type="submit " class="btn">Đăng nhập</button>
+                <div class="login-register">
+                    <p>Chưa có tài khoản?<a href="DangKy.html" class="register-link">Đăng ký</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="java/DangKy.js"></script>
+    <script type="text/javascript" src="java/Login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

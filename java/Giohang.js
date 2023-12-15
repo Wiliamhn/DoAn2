@@ -239,9 +239,7 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
 
   var hoten = $('#txt_hdem').val();
   var email = $('#txt_email').val();
-  var address = $('#txt_diachi').val();
   var sdt = $('#txt_sdt').val();
-  var tinh=$('#txt_tinh').val();
   if (hoten == null || hoten == '' || hoten.length > 50) {
       $('#s_hdem').html('Sai định dạng họ đệm');
   } 
@@ -262,16 +260,9 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
           {
             $('#s_email').html('*');
             {
-                //
-                if (address == null || address=='') {
-                  $('#s_diachi').html('Địa chỉ không được để rỗng !');
-                  } 
-                  else 
-                  {
-                  $('#s_diachi').html('*');
-                  {
-                    if (sdt == ''   && (validatePhone(sdt)==false)) {
-                      $('#s_sdt').html('Sai định dạng điện thoại');
+              
+               if (sdt == ''   && (validatePhone(sdt)==false)) {
+                $('#s_sdt').html('Sai định dạng điện thoại');
                   } else {
                     if(sdt.length !=10)
                     {
@@ -284,16 +275,15 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                            //Print
                             var str = `
                             <section style="text-align: center;">
-                                <h1>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</h1>
+                                <h1>HÓA ĐƠN </h1>
                             </section>
                             <div style="font-style: italic;">`+
                             dayname[dayofweek] + ' ngày '+ day + '/' + month+ '/'+ year    
                             +`</div>
-                            <div class="donvi">Tên đơn vị bán hàng: Công ty TNHH Minh Vũ</div>
+                            <div class="donvi">Tên đơn vị bán hàng: Thế giới đọc truyện Online</div>
                             <div>Người mua hàng : `+hoten+`</div>
                             <div>Số điện thoại : `+sdt+`</div>
                             <div>Email : `+email+`</div>
-                            <div>Địa chỉ : `+ address +` - Tỉnh  `+ tinh +`</div>
                             <table style="width: 100%;text-align:left">
                                 <tr>
                                     <th>STT</th>
@@ -343,7 +333,8 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                           str += `<div>Giảm giá : <span>`+listdiscount.km+`</span></div>
                           <div>Tổng tiền : <span>`+listdiscount.total+`đ</span></div></table>`
                           str += 
-                          ` <img style="margin-top:30px;margin-left:10%" src="image/uy tín.jpg">
+                          ` <img style="margin-top:100px;margin-left:40%; width:200px;height:200px" src="Image/thanhtoan.webp">
+                          <div style="text-align: center;margin-top:30px"><i>Quét mã QR để thanh toán</i></div>
                           `;
                           printHtml(str);
                           localStorage.setItem('Discount',null);
@@ -352,13 +343,12 @@ const dayname = ['CN','T2','T3','T4','T5','T6','T7'];
                     }
                   }
                   }
-                  }
+                  
             }
           }
         }
       }
   }
-} 
 function printHtml(data) {
   let popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
   popupWin.document.write(`

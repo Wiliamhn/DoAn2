@@ -1,0 +1,238 @@
+.img-logo4{
+	height:300px;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+}
+.Logo4{
+    height: 300px;
+    width: 60%;
+}
+.Paying{
+width: 50%;
+border: 0.5px solid #1f1e1e;
+border-radius: 10px;
+float: left;
+}
+.Infoder11 img{
+    width: 40px;
+    height: 70px;
+}
+.Infoder11-title{
+    margin-top: 20px;
+   
+    margin-left: 10px;
+}
+.Infoder11-title span{
+    font-size: 17px;
+    font-weight: 600;
+}
+.Infoder{
+    border-radius: 10px;
+    width: 35%;
+    overflow: hidden;
+    margin-left: 5%;
+    float: left;
+    border: 0.5px solid #1f1e1e;
+
+}
+.Infoder div:first-child{
+    font-size: 18px;
+   
+}
+.Infoder1{
+    display: flex;
+    margin: 20px;
+    margin-left: 30px;
+    width: 100%;
+}
+.Infoder1 img{
+    width: 60px;
+    height: 60px;
+}
+.Infoder1 div{
+   
+    margin-left: 20px;
+    margin-top: 3%;
+    line-height: 20px;
+}
+.Infoder1 span{
+  
+   font-weight: 600;
+}
+.Paying{
+    padding-left: 5px;
+ }
+ .payhead{
+     margin-top: 20px;
+     font-weight: bold;
+ }
+ .pay1{
+     display: inline-block;
+     margin: auto;
+     line-height: 25px;
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 10px;
+ }
+ .pay1 label{
+    width: 100%;
+    
+ }
+ .pay1 input{
+    width: 100%;
+     border-radius: 3px;
+     border: 1px solid rgb(244, 206, 180);
+     line-height: 20px;
+     outline: none;
+     padding: 5px;
+     outline: none;
+ }
+ 
+#thongtin{
+    height: 88px; 
+    width: 100%;
+     border-radius: 3px;
+     border: 1px solid rgb(244, 206, 180);
+     
+ }
+ #txt_tinh{
+     width: 100%;
+     border-radius: 3px;
+     border: 1px solid rgb(244, 206, 180);
+     height: 28px;
+     
+ }
+ .send{
+     float:right;
+     background-color: rgb(222, 55, 55);
+     line-height: 35px;
+     border: none;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+     transition: .3s ease-in-out;
+     margin-top: 20px;
+     border-radius: 4px;
+ }
+ .send:hover{
+   
+    background-color: rgb(55, 222, 105);
+    
+}
+.Totalpay{
+    border-top: 1px solid #000000;
+}
+.Totalpay div:first-child{
+ font-size: 18;
+ color: red;
+ 
+ margin-left: 0px;
+ font-weight: 600;
+ border: none;
+}
+.Totalpay div:last-child{
+    margin-bottom: 20px;
+}
+.Totalpay div{
+    padding: 10px;
+    width: 80%;
+    margin: 0px auto;
+    border-bottom: 1px solid rgb(196, 185, 185);
+   }
+.Totalpay> div>span:last-child{
+ float: right;
+ font-size: 14px;
+ font-weight: 600 ;
+ margin-right: 20px;
+}
+
+.tiless {
+	width: 1500px;
+	height: 250px;
+	font-size: 0;
+	text-align: center;
+  }
+  .tiless .tilee {
+	display: inline-block;
+	margin: 10px;
+	text-align: left;
+	opacity: 0.99;
+	overflow: hidden;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  .tiless .tilee:before {
+	content: "";
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+	width: 100%;
+	height: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 2;
+	transition-property: top, opacity;
+	transition-duration: 0.3s;
+	
+  }
+  .tiless .tilee img {
+	display: block;
+	width:150px;
+    height:220px;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: .3s ease-in-out;
+	 transition: .3s ease-in-out;
+  }
+  .tiless .tilee img:hover{
+	-webkit-transform: scale(1.3);
+	  transform: scale(1.3);
+  }
+  .tiless .tilee .details {
+	font-size: 15px;
+	padding: 20px;
+	color:#00CC99;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+  }
+  .tiless .tilee .details span {
+	display: block;
+	opacity: 0;
+	position: relative;
+	top: 100px;
+	transition-property: top, opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+  }
+  .tiless .tilee .details .title {
+	line-height: 1;
+	font-weight: 600;
+	font-size: 20px;
+  }
+  .tiless .tilee .details .info {
+	line-height: 1.2;
+	margin-top: 5px;
+	font-size: 15px;
+  }
+  .tiless .tilee:focus:before,
+  .tiless .tilee:focus span, .tiless .tilee:hover:before,
+  .tiless .tilee:hover span {
+	opacity: 1;
+  }
+  .tiless .tilee:focus:before, .tiless .tilee:hover:before {
+	top: 50%;
+  }
+  .tiless .tilee:focus span, .tiless .tilee:hover span {
+	top: 0;
+  }
+  .tiless .tilee:focus .title, .tiless .tilee:hover .title {
+	transition-delay: 0.15s;
+  }
+  .tiless .tilee:focus .info, .tiless .tilee:hover .info {
+	transition-delay: 0.25s;
+  }
+  
